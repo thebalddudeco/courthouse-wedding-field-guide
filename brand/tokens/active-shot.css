@@ -5,7 +5,7 @@
   --as-confirmed: #476e3d;
   --as-font-display: "Alfa Slab One";
   --as-font-ui: "Inter";
-  --as-rule-dark: rgb(26 26 26 / 22%);
-  --as-rule-light: rgb(232 230 224 / 22%);
-  --as-focus-ring: 0 0 0 3px rgb(228 123 40 / 35%);
+  --as-rule-dark: #1a1a1a;
+  --as-rule-light: #e8e6e0;
+  --as-focus-ring: 0 0 0 3px #e47b28;
 }

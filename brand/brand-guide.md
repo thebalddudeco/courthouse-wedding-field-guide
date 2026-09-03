@@ -43,7 +43,7 @@ Keep clear space around the logo equal to the diameter of the live indicator dot
 | Primary action | Action | `#E47B28` | Calls to action, live indicator and one loud focal point |
 | Confirmation | Confirmed | `#476E3D` | Success, completion and settled states |
 
-Action should be memorable, not constant. Ink and Screen carry most layouts; Confirmed is reserved for successful, completed or settled states. Lighter or quieter hierarchy comes from spacing, line weight, scale and transparency—not additional colors.
+Action should be memorable, not constant. Ink and Screen carry most layouts; Confirmed is reserved for successful, completed or settled states. Lighter or quieter hierarchy comes from spacing, line weight and scale—not tints, blends, transparency or additional colors.
 
 ## Typography
 

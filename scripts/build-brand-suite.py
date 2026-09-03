@@ -60,11 +60,11 @@ def lockup_svg(mode="light", stacked=False):
     if stacked:
         w, h = 720, 700
         symbol = mark_svg(fg, accent).replace('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="ActiveShot active frame mark">', '<g transform="translate(232 70) scale(1)">').replace('</svg>', '</g>')
-        body = f'''{symbol}<text x="360" y="420" text-anchor="middle" fill="{fg}" font-family="Alfa Slab One" font-size="86">Active<tspan fill="{accent}">Shot</tspan></text><text x="360" y="474" text-anchor="middle" fill="{fg}" opacity=".68" font-family="Inter" font-size="21" letter-spacing="5">PHOTOGRAPHY FIELD GUIDE</text>'''
+        body = f'''{symbol}<text x="360" y="420" text-anchor="middle" fill="{fg}" font-family="Alfa Slab One" font-size="86">Active<tspan fill="{accent}">Shot</tspan></text><text x="360" y="474" text-anchor="middle" fill="{fg}" font-family="Inter" font-size="21" letter-spacing="5">PHOTOGRAPHY FIELD GUIDE</text>'''
     else:
         w, h = 1200, 320
         symbol = mark_svg(fg, accent).replace('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="ActiveShot active frame mark">', '<g transform="translate(42 32) scale(.98)">').replace('</svg>', '</g>')
-        body = f'''{symbol}<text x="330" y="154" fill="{fg}" font-family="Alfa Slab One" font-size="104">Active<tspan fill="{accent}">Shot</tspan></text><text x="336" y="207" fill="{fg}" opacity=".68" font-family="Inter" font-size="22" letter-spacing="6">PHOTOGRAPHY FIELD GUIDE</text>'''
+        body = f'''{symbol}<text x="330" y="154" fill="{fg}" font-family="Alfa Slab One" font-size="104">Active<tspan fill="{accent}">Shot</tspan></text><text x="336" y="207" fill="{fg}" font-family="Inter" font-size="22" letter-spacing="6">PHOTOGRAPHY FIELD GUIDE</text>'''
     return f'''<svg xmlns="http://www.w3.org/2000/svg" width="{w}" height="{h}" viewBox="0 0 {w} {h}" role="img" aria-label="ActiveShot logo">
 <style>@font-face{{font-family:'Alfa Slab One';src:url('../../fonts/AlfaSlabOne-Regular.ttf')}}@font-face{{font-family:'Inter';src:url('../../fonts/Inter-Variable.ttf')}}</style>
 <rect width="100%" height="100%" fill="{bg}"/>{body}</svg>'''
