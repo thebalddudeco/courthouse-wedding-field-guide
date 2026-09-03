@@ -4,3 +4,12 @@ body[data-theme="gallery"]{--page:#2b3038;--surface:#131c18;--surface2:#1b2721;-
 body[data-theme="darkroom"]{--page:#4a4a49;--surface:#232323;--surface2:#2d2b28;--ink:#e8dfcd;--muted:#aaa293;--accent:#c8aa72;--accent-ink:#211f1c;--line:rgba(232,223,205,.2);--radius:.15rem;--display:Georgia,"Times New Roman",serif}body[data-theme="darkroom"] .phone{background:#1a1a1a;box-shadow:1.2rem 1.5rem 2.2rem rgba(0,0,0,.36)}body[data-theme="darkroom"] .mark{background:var(--accent);color:var(--accent-ink)}body[data-theme="darkroom"] .must-card{border:1px solid var(--accent);background:#292722}body[data-theme="darkroom"] .phase-tabs button.active{background:var(--accent);color:var(--accent-ink)}body[data-theme="darkroom"] .assignment-head h2,body[data-theme="darkroom"] .app-head strong{text-transform:lowercase;font-weight:700}
 @media(max-width:760px){.lab-header{align-items:center;padding-top:max(1rem,env(safe-area-inset-top))}.lab-header>div small{display:none}.lab-header h1{font-size:1.2rem}.theme-picker{display:flex;overflow:auto;scrollbar-width:none}.theme-picker::-webkit-scrollbar{display:none}.theme-picker button{min-width:12.5rem}.preview-stage{grid-template-columns:1fr;padding-top:.5rem}.phone{width:min(100%,30rem);margin:auto}.direction-notes{max-width:30rem;margin:auto}.phone-screen{min-height:690px}.direction-number{font-size:4rem}}
 @media(max-width:420px){.lab-header{padding-inline:.8rem}.theme-picker{padding-inline:.8rem}.preview-stage{padding-inline:.55rem}.phone{padding:.35rem;border-radius:2rem}.phone-screen{min-height:calc(100vh - 11rem);padding:2.3rem .8rem .8rem;border-radius:1.7rem}.direction-notes{padding:0 .5rem}.must-card h3{font-size:1.35rem}.assignment-head h2{font-size:1.5rem}}
+
+/* Keep the active-shot copy readable when the card and app surface are both dark. */
+.must-card{--card-text:#f7f4f1;color:var(--card-text)}
+.must-card h3{color:var(--card-text)}
+.must-card small{color:color-mix(in srgb,var(--card-text) 72%,transparent);opacity:1}
+.must-card p{color:color-mix(in srgb,var(--card-text) 84%,transparent);opacity:1}
+body[data-theme="technical"] .must-card{--card-text:#f7f7f4}
+body[data-theme="gallery"] .must-card{--card-text:#f5f0e7}
+body[data-theme="darkroom"] .must-card{--card-text:#f1e8d7}
