@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#071018">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Wedding Guide">
+  <title>Courthouse Wedding Field Guide</title>
+  <meta name="description" content="Interactive courthouse wedding shot list and posing guide.">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar"><div class="topbar-inner">
+    <div class="brand"><span class="camera">▣</span><div><span class="kicker">FIELD GUIDE</span><strong>Courthouse Wedding Run-of-Show</strong></div></div><span class="saved">● Saved on this device</span>
+    <div class="status-row"><div class="wedding-tabs" role="tablist"><button class="tab active" data-wedding="A">Wedding A</button><button class="tab" data-wedding="B">Wedding B</button></div><div class="progress-wrap"><div class="progress-label"><span id="progressCount">0 / 0 shots</span><span id="progressPercent">0%</span></div><div class="progress"><span id="progressBar"></span></div></div></div>
+  </div></header>
+  <main class="page">
+    <section class="dashboard"><div class="dashboard-head"><div><span class="kicker" id="dashboardLabel">WEDDING A DASHBOARD</span><h1>Today’s assignment</h1></div><div class="actions"><button id="quickToggle" class="primary">☑ Quick view</button><button id="resetButton" class="icon-button" aria-label="Clear current wedding">↻</button></div></div><div class="details-grid"><input id="couple" placeholder="Couple / identifier"><input id="time" placeholder="Ceremony time"><input id="courthouse" placeholder="Courthouse / meeting point"></div><textarea id="vip" placeholder="VIPs, family combinations, sensitivities, access notes…"></textarea></section>
+    <nav class="shortcuts"><button data-jump="preflight">Preflight</button><button data-jump="before">Before</button><button data-jump="during">Ceremony</button><button data-jump="pose-walk">5 poses</button><button data-jump="family">Groups</button><button data-jump="street">City</button><button data-jump="quick-reference">Final check</button></nav>
+    <div id="sections" class="sections"></div><section id="quick-reference" class="quick-reference"></section>
+  </main>
+  <div class="mobile-bar"><div><strong id="mobileStatus">Wedding A · 0% complete</strong><div class="progress"><span id="mobileProgress"></span></div></div><button id="mobileQuick" class="primary">Quick view</button></div>
+  <script src="app.js"></script>
+</body></html>
