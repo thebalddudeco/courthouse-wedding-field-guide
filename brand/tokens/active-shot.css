@@ -1,15 +1,11 @@
 :root {
-  --as-action-orange: #f47728;
-  --as-darkroom-charcoal: #1a1a1a;
-  --as-field-moss: #476e3d;
-  --as-contact-sheet: #f7f6f0;
-  --as-warm-cream: #e8e6dd;
-  --as-equipment-gray: #686761;
-  --as-flash-white: #fcfbf7;
+  --as-screen: #e8e6e0;
+  --as-ink: #1a1a1a;
+  --as-action: #e47b28;
+  --as-confirmed: #476e3d;
   --as-font-display: "Alfa Slab One", Georgia, serif;
   --as-font-ui: Inter, Arial, sans-serif;
   --as-rule-dark: rgb(26 26 26 / 22%);
-  --as-rule-light: rgb(247 246 240 / 22%);
-  --as-focus-ring: 0 0 0 3px rgb(244 119 40 / 35%);
+  --as-rule-light: rgb(232 230 224 / 22%);
+  --as-focus-ring: 0 0 0 3px rgb(228 123 40 / 35%);
 }
-

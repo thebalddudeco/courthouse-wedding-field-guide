@@ -1,13 +1,10 @@
 {
   "brand": "ActiveShot",
   "color": {
-    "actionOrange": "#F47728",
-    "darkroomCharcoal": "#1A1A1A",
-    "fieldMoss": "#476E3D",
-    "contactSheet": "#F7F6F0",
-    "warmCream": "#E8E6DD",
-    "equipmentGray": "#686761",
-    "flashWhite": "#FCFBF7"
+    "screen": "#E8E6E0",
+    "ink": "#1A1A1A",
+    "action": "#E47B28",
+    "confirmed": "#476E3D"
   },
   "type": {
     "display": "Alfa Slab One",
@@ -19,4 +16,3 @@
     "sequence": "Prep. Shoot. Wrap."
   }
 }
-

@@ -38,15 +38,12 @@ Keep clear space around the logo equal to the diameter of the live indicator dot
 
 | Role | Name | Hex | Use |
 |---|---|---:|---|
-| Primary | Action Orange | `#F47728` | Calls to action, live indicator, highlights |
-| Foundation | Darkroom Charcoal | `#1A1A1A` | Primary dark surface and dark logo |
-| Field color | Field Moss | `#476E3D` | Secondary surface, progress, grounded accent |
-| Primary light | Contact Sheet | `#F7F6F0` | Light background and reversed text |
-| Secondary light | Warm Cream | `#E8E6DD` | Secondary panels and neutral fields |
-| Supporting | Equipment Gray | `#686761` | Secondary copy and metadata |
-| Highlight | Flash White | `#FCFBF7` | High-contrast details only |
+| Surface | Screen | `#E8E6E0` | Light backgrounds, reversed text, cards and input fields |
+| Foundation | Ink | `#1A1A1A` | Primary dark surface, text and dark logo |
+| Primary action | Action | `#E47B28` | Calls to action, live indicator and one loud focal point |
+| Confirmation | Confirmed | `#476E3D` | Success, completion and settled states |
 
-Action Orange should be memorable, not constant. Charcoal and Contact Sheet carry most layouts; Moss separates sections and supports status/progress moments.
+Action should be memorable, not constant. Ink and Screen carry most layouts; Confirmed is reserved for successful, completed or settled states. Lighter or quieter hierarchy comes from spacing, line weight, scale and transparency—not additional colors.
 
 ## Typography
 
@@ -89,4 +86,3 @@ Safe default cadence:
 ## Website and product
 
 The product and marketing site share the same palette, mark, and typography. Product UI remains calmer and more functional; marketing can use larger orange fields and more aggressive display type. Primary calls to action use Action Orange with Darkroom Charcoal text.
-

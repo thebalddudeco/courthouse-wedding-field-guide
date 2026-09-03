@@ -10,12 +10,12 @@ ICONS = BRAND / "icons"
 SOCIAL = BRAND / "social"
 
 INK = "#1A1A1A"
-ORANGE = "#F47728"
+ORANGE = "#E47B28"
 MOSS = "#476E3D"
-PAPER = "#F7F6F0"
-CREAM = "#E8E6DD"
-GRAY = "#686761"
-WHITE = "#FCFBF7"
+PAPER = "#E8E6E0"
+CREAM = PAPER
+GRAY = INK
+WHITE = PAPER
 
 ALFA = FONTS / "AlfaSlabOne-Regular.ttf"
 INTER = FONTS / "Inter-Variable.ttf"
@@ -184,15 +184,15 @@ def brand_board():
     d.text((110,425),"ActiveShot",font=font(ALFA,88),fill=INK)
     d.text((116,555),"WALK IN READY.",font=font(ALFA,50),fill=INK)
     d.text((116,640),"PHOTOGRAPHY FIELD GUIDES,\nBUILT FOR THE SHOOT.",font=font(INTER,28),fill=INK,spacing=14)
-    colors=[("ACTION",ORANGE),("DARKROOM",INK),("FIELD",MOSS),("CONTACT",PAPER),("CREAM",CREAM),("EQUIPMENT",GRAY)]
+    colors=[("SURFACE",PAPER),("INK",INK),("ACTION",ORANGE),("CONFIRMED",MOSS)]
     x0,y0=790,110
     d.text((x0,y0),"ACTIVE SHOT / CORE SYSTEM",font=font(INTER,24),fill=GRAY)
     d.text((x0,y0+58),"Decisive. Practical.\nCreatively credible.",font=font(ALFA,68),fill=INK,spacing=2)
-    sw,sh=300,155
+    sw,sh=460,155
     for i,(label,color) in enumerate(colors):
-        x=x0+(i%3)*(sw+22); y=430+(i//3)*(sh+75)
+        x=x0+(i%2)*(sw+24); y=430+(i//2)*(sh+75)
         d.rectangle((x,y,x+sw,y+sh),fill=color,outline=INK,width=2)
-        label_color=PAPER if color in (INK,MOSS,GRAY) else INK
+        label_color=PAPER if color in (INK,MOSS) else INK
         d.text((x+18,y+18),label,font=font(INTER,22),fill=label_color)
         d.text((x+18,y+sh-45),color.upper(),font=font(INTER,20),fill=label_color)
     d.line((x0,890,1780,890),fill=INK,width=2)

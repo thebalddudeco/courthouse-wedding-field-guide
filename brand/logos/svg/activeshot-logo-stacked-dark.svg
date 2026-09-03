@@ -2,10 +2,10 @@
 <style>@font-face{font-family:'Alfa Slab One';src:url('../../fonts/AlfaSlabOne-Regular.ttf')}@font-face{font-family:'Inter';src:url('../../fonts/Inter-Variable.ttf')}</style>
 <rect width="100%" height="100%" fill="#1A1A1A"/><g transform="translate(232 70) scale(1)">
 
-<g fill="none" stroke="#F7F6F0" stroke-width="12" stroke-linecap="square">
+<g fill="none" stroke="#E8E6E0" stroke-width="12" stroke-linecap="square">
   <path d="M48 92V48h44"/><path d="M164 48h44v44"/>
   <path d="M208 164v44h-44"/><path d="M92 208H48v-44"/>
 </g>
-<path d="M78 184 124 70h10l46 114h-25l-10-27h-34l-10 27H78Zm41-48h18l-9-27-9 27Z" fill="#F7F6F0"/>
-<circle cx="183" cy="75" r="14" fill="#F47728"/>
-</g><text x="360" y="420" text-anchor="middle" fill="#F7F6F0" font-family="Alfa Slab One, Georgia, serif" font-size="86">Active<tspan fill="#F47728">Shot</tspan></text><text x="360" y="474" text-anchor="middle" fill="#F7F6F0" opacity=".68" font-family="Inter, Arial, sans-serif" font-size="21" letter-spacing="5">PHOTOGRAPHY FIELD GUIDE</text></svg>
+<path d="M78 184 124 70h10l46 114h-25l-10-27h-34l-10 27H78Zm41-48h18l-9-27-9 27Z" fill="#E8E6E0"/>
+<circle cx="183" cy="75" r="14" fill="#E47B28"/>
+</g><text x="360" y="420" text-anchor="middle" fill="#E8E6E0" font-family="Alfa Slab One, Georgia, serif" font-size="86">Active<tspan fill="#E47B28">Shot</tspan></text><text x="360" y="474" text-anchor="middle" fill="#E8E6E0" opacity=".68" font-family="Inter, Arial, sans-serif" font-size="21" letter-spacing="5">PHOTOGRAPHY FIELD GUIDE</text></svg>

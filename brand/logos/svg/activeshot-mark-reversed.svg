@@ -1,9 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="ActiveShot active frame mark">
 
-<g fill="none" stroke="#F7F6F0" stroke-width="12" stroke-linecap="square">
+<g fill="none" stroke="#E8E6E0" stroke-width="12" stroke-linecap="square">
   <path d="M48 92V48h44"/><path d="M164 48h44v44"/>
   <path d="M208 164v44h-44"/><path d="M92 208H48v-44"/>
 </g>
-<path d="M78 184 124 70h10l46 114h-25l-10-27h-34l-10 27H78Zm41-48h18l-9-27-9 27Z" fill="#F7F6F0"/>
-<circle cx="183" cy="75" r="14" fill="#F47728"/>
+<path d="M78 184 124 70h10l46 114h-25l-10-27h-34l-10 27H78Zm41-48h18l-9-27-9 27Z" fill="#E8E6E0"/>
+<circle cx="183" cy="75" r="14" fill="#E47B28"/>
 </svg>
