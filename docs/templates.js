@@ -1,4 +1,4 @@
-window.SHOTFLOW_TEMPLATES={
+window.ACTIVESHOT_TEMPLATES={
  street:{
   label:'Street',icon:'↗',color:'#22d3ee',description:'Light, layers, movement and decisive moments.',defaultName:'Street Walk',
   sections:[

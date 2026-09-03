@@ -1,12 +1,12 @@
-# ShotFlow — Photography Field Guide
+# ActiveShot — Photography Field Guide
 
 A touch-friendly, offline-capable production app for street, editorial, wedding, and portrait photography.
 
 ## Live site
 
-**https://thebalddudeco.github.io/courthouse-wedding-field-guide/**
+**https://activeshot.app/**
 
-ShotFlow includes purpose-built field guides, Prep / On Set / Wrap stages, must-get stars, a one-shot focus mode, reference images, drag-to-reorder shot lists, reusable gear kits, photographer prompts and exact posing scripts, notes, clean PDF export, multiple saved assignments, duplication, archiving, JSON backup and restore, and offline caching after the first visit.
+ActiveShot includes purpose-built field guides, Prep / On Set / Wrap stages, must-get stars, a one-shot focus mode, reference images, drag-to-reorder shot lists, reusable gear kits, photographer prompts and exact posing scripts, notes, clean PDF export, multiple saved assignments, duplication, archiving, JSON backup and restore, and offline caching after the first visit.
 
 ## Data and privacy
 

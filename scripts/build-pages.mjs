@@ -13,4 +13,4 @@ new Function(await readFile(resolve(source, 'samples.js'), 'utf8'));
 JSON.parse(await readFile(resolve(source, 'manifest.webmanifest'), 'utf8'));
 await rm(output, { recursive: true, force: true });
 await cp(source, output, { recursive: true });
-console.log(`ShotFlow static build complete: ${required.length} required assets verified.`);
+console.log(`ActiveShot static build complete: ${required.length} required assets verified.`);
