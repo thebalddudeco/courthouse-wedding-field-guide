@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#111512">
+  <title>ShotFlow — Visual Direction Samples</title>
+  <meta name="description" content="Four interactive visual directions for the photography field guide.">
+  <link rel="stylesheet" href="samples.css">
+</head>
+<body data-theme="editorial">
+  <header class="lab-header">
+    <a href="./">← Back to app</a>
+    <div><small>BRAND WORKSHOP</small><h1>Four visual directions</h1></div>
+    <span class="sample-count">01 / 04</span>
+  </header>
+
+  <nav class="theme-picker" aria-label="Choose a visual direction">
+    <button class="active" data-set-theme="editorial"><i><b></b><b></b><b></b></i><span><small>01</small>Editorial Sand</span></button>
+    <button data-set-theme="technical"><i><b></b><b></b><b></b></i><span><small>02</small>Technical Black</span></button>
+    <button data-set-theme="gallery"><i><b></b><b></b><b></b></i><span><small>03</small>Gallery Night</span></button>
+    <button data-set-theme="darkroom"><i><b></b><b></b><b></b></i><span><small>04</small>Darkroom Gold</span></button>
+  </nav>
+
+  <main class="preview-stage">
+    <section class="phone" aria-label="Interactive app sample">
+      <div class="phone-screen">
+        <header class="app-head"><button class="mark" aria-label="Home"><span>WT</span></button><div><small>PHOTOGRAPHY FIELD GUIDE</small><strong>Working Title</strong></div><button class="menu" aria-label="Menu">☰</button></header>
+        <div class="assignment-head"><div><span class="stage-label">ON SET · WEDDING</span><h2>City Hall Portraits</h2></div><div class="progress"><strong>38</strong><small>%</small></div></div>
+        <nav class="phase-tabs"><button>Prep</button><button class="active">On Set</button><button>Wrap</button></nav>
+        <section class="must-card"><span class="must-star">★</span><div><small>CURRENT SHOT · 4 OF 12</small><h3>Lovely Walk</h3><p>Hold hands and take a slow walk toward me. Look at each other—not at the camera.</p></div></section>
+        <div class="script"><small>SAY THIS</small><p>“Stay close, keep moving, and let your free hands relax.”</p></div>
+        <div class="shot-list">
+          <button class="shot done"><span class="check">✓</span><div><small>CAPTURED</small><strong>Wide establishing frame</strong></div><span>☆</span></button>
+          <button class="shot current"><span class="check"></span><div><small>NOW</small><strong>Medium walking frame</strong></div><span class="toggle-star">★</span></button>
+          <button class="shot"><span class="check"></span><div><small>UP NEXT</small><strong>Tight hands and movement</strong></div><span class="toggle-star">☆</span></button>
+        </div>
+        <button class="next-button">Complete &amp; next <span>→</span></button>
+        <footer class="app-nav"><button class="active">●<small>Shoot</small></button><button>□<small>Shots</small></button><button>⌁<small>Gear</small></button><button>•••<small>More</small></button></footer>
+      </div>
+    </section>
+
+    <aside class="direction-notes">
+      <span class="direction-number">01</span>
+      <small class="direction-kicker">VISUAL DIRECTION</small>
+      <h2>Editorial Sand</h2>
+      <p class="direction-copy">Gallery-catalog restraint with warm stone surfaces, black ink and a cool sky accent.</p>
+      <div class="palette"><span></span><span></span><span></span><span></span></div>
+      <dl><div><dt>Personality</dt><dd>Artful · quiet · high-fashion</dd></div><div><dt>Best for</dt><dd>Editorial and wedding storytelling</dd></div><div><dt>Watch-out</dt><dd>Needs strong contrast outdoors</dd></div></dl>
+      <div class="direction-nav"><button id="previousTheme">← Previous</button><button id="nextTheme">Next direction →</button></div>
+    </aside>
+  </main>
+  <script src="samples.js"></script>
+</body>
+</html>
