@@ -6,11 +6,11 @@ A touch-friendly, offline-capable production app for street, editorial, wedding,
 
 **https://thebalddudeco.github.io/courthouse-wedding-field-guide/**
 
-ShotFlow includes purpose-built field guides, multiple saved assignments, progress tracking, photographer prompts, notes, a field-speed quick view, custom checklist editing, duplication, archiving, JSON backup and restore, and offline caching after the first visit.
+ShotFlow includes purpose-built field guides, Prep / On Set / Wrap stages, must-get stars, a one-shot focus mode, reference images, drag-to-reorder shot lists, reusable gear kits, photographer prompts and exact posing scripts, notes, clean PDF export, multiple saved assignments, duplication, archiving, JSON backup and restore, and offline caching after the first visit.
 
 ## Data and privacy
 
-Assignments, checkmarks, schedules, and notes stay in the browser's local storage on the device where they are entered. They are not committed to this repository or sent to a database. Use **Backup data** before clearing browser storage or moving to another device.
+Assignments, checkmarks, schedules, notes, gear lists and compressed reference images stay in the browser's local storage on the device where they are entered. They are not committed to this repository or sent to a database. Use **Backup data** before clearing browser storage or moving to another device. Cross-device sync is planned but is not active yet.
 
 ## iPad use
 
