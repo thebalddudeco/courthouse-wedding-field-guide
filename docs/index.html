@@ -6,22 +6,54 @@
   <meta name="theme-color" content="#071018">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="apple-mobile-web-app-title" content="Wedding Guide">
-  <title>Courthouse Wedding Field Guide</title>
-  <meta name="description" content="Interactive courthouse wedding shot list and posing guide.">
+  <meta name="apple-mobile-web-app-title" content="ShotFlow">
+  <title>ShotFlow — Photography Field Guide</title>
+  <meta name="description" content="Offline field guides and interactive shot lists for street, editorial, wedding and portrait photography.">
   <link rel="manifest" href="manifest.webmanifest">
+  <link rel="apple-touch-icon" href="icon-180.png">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="topbar"><div class="topbar-inner">
-    <div class="brand"><span class="camera">▣</span><div><span class="kicker">FIELD GUIDE</span><strong>Courthouse Wedding Run-of-Show</strong></div></div><span class="saved">● Saved on this device</span>
-    <div class="status-row"><div class="wedding-tabs" role="tablist"><button class="tab active" data-wedding="A">Wedding A</button><button class="tab" data-wedding="B">Wedding B</button></div><div class="progress-wrap"><div class="progress-label"><span id="progressCount">0 / 0 shots</span><span id="progressPercent">0%</span></div><div class="progress"><span id="progressBar"></span></div></div></div>
-  </div></header>
-  <main class="page">
-    <section class="dashboard"><div class="dashboard-head"><div><span class="kicker" id="dashboardLabel">WEDDING A DASHBOARD</span><h1>Today’s assignment</h1></div><div class="actions"><button id="quickToggle" class="primary">☑ Quick view</button><button id="resetButton" class="icon-button" aria-label="Clear current wedding">↻</button></div></div><div class="details-grid"><input id="couple" placeholder="Couple / identifier"><input id="time" placeholder="Ceremony time"><input id="courthouse" placeholder="Courthouse / meeting point"></div><textarea id="vip" placeholder="VIPs, family combinations, sensitivities, access notes…"></textarea></section>
-    <nav class="shortcuts"><button data-jump="preflight">Preflight</button><button data-jump="before">Before</button><button data-jump="during">Ceremony</button><button data-jump="pose-walk">5 poses</button><button data-jump="family">Groups</button><button data-jump="street">City</button><button data-jump="quick-reference">Final check</button></nav>
-    <div id="sections" class="sections"></div><section id="quick-reference" class="quick-reference"></section>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <button id="homeButton" class="brand-button" aria-label="Return to shoots"><span class="brand-mark">SF</span><span><small>PHOTOGRAPHY FIELD GUIDE</small><strong>ShotFlow</strong></span></button>
+      <div class="header-actions"><span id="saveStatus" class="save-status"><i></i> Saved</span><button id="installButton" class="ghost-button hidden">Install app</button><button id="moreButton" class="icon-button" aria-label="More options">•••</button></div>
+    </div>
+  </header>
+
+  <main id="homeView" class="page home-view">
+    <section class="home-heading"><div><span class="eyebrow">YOUR FIELD KIT</span><h1>What are you shooting?</h1><p>Start a new guide or continue a saved assignment.</p></div><button id="backupButton" class="secondary-button">⇩ Backup data</button></section>
+    <section id="typeGrid" class="type-grid" aria-label="New shoot types"></section>
+    <section class="shoots-section"><div class="section-heading"><div><span class="eyebrow">ON DECK</span><h2>Active shoots</h2></div><span id="shootCount" class="count-pill">0</span></div><div id="shootList" class="shoot-list"></div></section>
+    <section id="archiveSection" class="shoots-section hidden"><div class="section-heading"><div><span class="eyebrow">COMPLETED</span><h2>Archive</h2></div></div><div id="archiveList" class="shoot-list"></div></section>
   </main>
-  <div class="mobile-bar"><div><strong id="mobileStatus">Wedding A · 0% complete</strong><div class="progress"><span id="mobileProgress"></span></div></div><button id="mobileQuick" class="primary">Quick view</button></div>
+
+  <main id="guideView" class="page guide-view hidden">
+    <section class="assignment-card">
+      <div class="assignment-top"><button id="backButton" class="back-button">← Shoots</button><span id="modePill" class="mode-pill"></span><button id="guideMenuButton" class="icon-button" aria-label="Guide options">•••</button></div>
+      <div class="title-row"><div><span id="guideEyebrow" class="eyebrow"></span><input id="shootName" class="shoot-name" aria-label="Shoot name"></div><div class="progress-ring" id="progressRing"><strong id="progressPercent">0%</strong></div></div>
+      <div class="meta-grid"><label><span>Date / time</span><input id="shootDate" type="datetime-local"></label><label><span>Location</span><input id="shootLocation" placeholder="Location or meeting point"></label><label><span>People / subject</span><input id="shootPeople" placeholder="Client, model, couple or subject"></label></div>
+      <textarea id="shootBrief" class="brief" placeholder="Creative brief, must-haves, sensitivities, access notes…"></textarea>
+      <div class="progress-line"><span id="progressCount">0 / 0 complete</span><div class="progress"><i id="progressBar"></i></div></div>
+    </section>
+
+    <nav id="sectionNav" class="shortcuts" aria-label="Guide sections"></nav>
+    <div class="view-actions"><button id="quickToggle" class="primary-button">☑ Quick view</button><button id="addSectionButton" class="secondary-button hidden">＋ Add section</button></div>
+    <div id="guideSections" class="guide-sections"></div>
+    <section id="quickReference" class="quick-reference"></section>
+  </main>
+
+  <div id="bottomBar" class="bottom-bar hidden"><button id="bottomBack">←</button><div><strong id="bottomTitle"></strong><span id="bottomProgress"></span></div><button id="bottomQuick">Quick</button></div>
+
+  <dialog id="newShootDialog"><form method="dialog" id="newShootForm"><button type="button" class="dialog-close" data-close="newShootDialog" aria-label="Close">×</button><span id="dialogType" class="mode-pill"></span><h2>New assignment</h2><label><span>Name</span><input id="newShootName" required placeholder="Give this shoot a name"></label><label><span>Date</span><input id="newShootDate" type="datetime-local"></label><label><span>Location</span><input id="newShootLocation" placeholder="Optional"></label><div class="dialog-actions"><button type="button" data-close="newShootDialog" class="secondary-button">Cancel</button><button id="createShootButton" value="default" class="primary-button">Create guide</button></div></form></dialog>
+
+  <dialog id="menuDialog"><form method="dialog"><button class="dialog-close" value="cancel">×</button><h2 id="menuTitle">App options</h2><div id="menuActions" class="menu-actions"></div></form></dialog>
+  <dialog id="itemDialog"><form method="dialog" id="itemForm"><button type="button" class="dialog-close" data-close="itemDialog">×</button><h2 id="itemDialogTitle">Add checklist item</h2><label><span>Item</span><input id="newItemText" required placeholder="What needs to be captured?"></label><label><span>Photographer prompt or note</span><textarea id="newItemPrompt" placeholder="Optional direction or reminder"></textarea></label><div class="dialog-actions"><button type="button" data-close="itemDialog" class="secondary-button">Cancel</button><button value="default" class="primary-button">Add item</button></div></form></dialog>
+  <input id="importInput" type="file" accept="application/json" hidden>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="templates.js"></script>
   <script src="app.js"></script>
-</body></html>
+</body>
+</html>
