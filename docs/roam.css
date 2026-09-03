@@ -112,7 +112,7 @@ button { cursor: pointer; }
 body:has(.guide-view:not(.hidden)) .topbar-inner { border-bottom-color: var(--rule); background: var(--charcoal); }
 body:has(.guide-view:not(.hidden)) .brand-button strong { color: var(--paper); }
 body:has(.guide-view:not(.hidden)) .brand-button small { color: var(--gray); }
-body:has(.guide-view:not(.hidden)) .brand-mark { background: var(--gold); }
+body:has(.guide-view:not(.hidden)) .brand-mark { background-color: var(--paper); }
 body:has(.guide-view:not(.hidden)) .save-status, body:has(.guide-view:not(.hidden)) .icon-button { color: var(--paper); }
 body:has(.guide-view:not(.hidden)) .save-status i { background: var(--gold); }
 body:has(.guide-view:not(.hidden)) .icon-button { border-color: var(--rule); }
@@ -267,8 +267,8 @@ button, input, textarea { font-family: var(--font-ui); }
 .topbar { background: var(--cream); }
 .topbar-inner { width: min(100%, 660px); min-height: 4.5rem; padding: .85rem 1.1rem; border: 0; background: var(--cream); box-shadow: none; }
 .brand-button { gap: .58rem; color: var(--charcoal); }
-.brand-mark { position: relative; display: grid; width: 2.1rem; height: 2.1rem; place-items: center; border: 1.5px solid var(--charcoal); border-radius: 50%; background: var(--gold); transform: none; }
-.brand-mark::after { content: "A"; color: var(--charcoal); font-family: var(--font-mark); font-size: .92rem; }
+.brand-mark { position: relative; display: grid; width: 2.2rem; height: 2.2rem; place-items: center; border: 1.5px solid var(--charcoal); border-radius: .42rem; background: var(--paper) url("icon.svg") center / 88% no-repeat; transform: none; }
+.brand-mark::after { content: none; }
 .brand-button strong { color: var(--charcoal); font-family: var(--font-mark); font-size: 1.18rem; font-weight: 400; letter-spacing: -.025em; }
 .brand-button small { margin-top: .22rem; color: var(--gray); font-size: .62rem; font-weight: 500; letter-spacing: .09em; }
 .save-status { color: var(--gray); font-weight: 450; }.save-status i { background: var(--olive); }
@@ -313,7 +313,7 @@ button, input, textarea { font-family: var(--font-ui); }
 body:has(.guide-view:not(.hidden)) .topbar-inner { border: 0; background: var(--cream); }
 body:has(.guide-view:not(.hidden)) .brand-button strong { color: var(--charcoal); }
 body:has(.guide-view:not(.hidden)) .brand-button small { color: var(--gray); }
-body:has(.guide-view:not(.hidden)) .brand-mark { background: var(--gold); }
+body:has(.guide-view:not(.hidden)) .brand-mark { background-color: var(--paper); }
 body:has(.guide-view:not(.hidden)) .save-status, body:has(.guide-view:not(.hidden)) .icon-button { color: var(--charcoal); }
 body:has(.guide-view:not(.hidden)) .icon-button { border-color: var(--charcoal); }
 .assignment-card { margin: 0 0 .8rem; padding: 1rem; border: 1.5px solid var(--charcoal); border-radius: 1rem; background: var(--white); }

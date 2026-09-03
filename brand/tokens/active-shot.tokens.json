@@ -1,0 +1,22 @@
+{
+  "brand": "ActiveShot",
+  "color": {
+    "actionOrange": "#F47728",
+    "darkroomCharcoal": "#1A1A1A",
+    "fieldMoss": "#476E3D",
+    "contactSheet": "#F7F6F0",
+    "warmCream": "#E8E6DD",
+    "equipmentGray": "#686761",
+    "flashWhite": "#FCFBF7"
+  },
+  "type": {
+    "display": "Alfa Slab One",
+    "interface": "Inter"
+  },
+  "copy": {
+    "tagline": "Walk in ready.",
+    "productLine": "Photography field guides, built for the shoot.",
+    "sequence": "Prep. Shoot. Wrap."
+  }
+}
+

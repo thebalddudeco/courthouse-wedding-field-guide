@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>ActiveShot Brand Suite</title>
+  <style>
+    @font-face{font-family:Alfa;src:url(fonts/AlfaSlabOne-Regular.ttf)}
+    @font-face{font-family:Inter;src:url(fonts/Inter-Variable.ttf)}
+    :root{--orange:#f47728;--ink:#1a1a1a;--moss:#476e3d;--paper:#f7f6f0;--cream:#e8e6dd;--gray:#686761}
+    *{box-sizing:border-box}body{margin:0;background:var(--ink);color:var(--paper);font-family:Inter,Arial,sans-serif}header,main{width:min(1180px,calc(100% - 32px));margin:auto}header{padding:64px 0 36px}h1,h2{font-family:Alfa,Georgia,serif;font-weight:400}h1{max-width:900px;margin:18px 0;font-size:clamp(46px,8vw,108px);line-height:.9}header p{max-width:680px;color:#bbb9b1;font-size:18px;line-height:1.55}.eyebrow{color:var(--orange);font-size:13px;letter-spacing:.18em}.board{display:block;width:100%;border:1px solid #403f3a}.section{padding:72px 0;border-top:1px solid #403f3a}.section h2{margin:0 0 26px;font-size:38px}.logos,.social{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.card{overflow:hidden;border:1px solid #403f3a;background:#242422}.card img{display:block;width:100%;height:auto}.card p{margin:0;padding:14px 16px;color:#bbb9b1;font-size:14px}.colors{display:grid;grid-template-columns:repeat(6,1fr);gap:10px}.swatch{min-height:160px;padding:14px;border:1px solid #111;display:flex;flex-direction:column;justify-content:space-between;color:var(--ink)}.swatch.dark{color:var(--paper)}.swatch strong{font-size:13px}.links{display:flex;flex-wrap:wrap;gap:10px}.links a{padding:12px 16px;border:1px solid var(--orange);color:var(--orange);text-decoration:none}.links a:hover{background:var(--orange);color:var(--ink)}footer{padding:48px 0 70px;color:var(--gray)}@media(max-width:760px){.logos,.social{grid-template-columns:1fr}.colors{grid-template-columns:repeat(2,1fr)}header{padding-top:36px}}
+  </style>
+</head>
+<body>
+  <header><span class="eyebrow">ACTIVE SHOT / BRAND SYSTEM</span><h1>Walk in ready.</h1><p>A decisive field identity for photographers: editorial enough to feel creative, practical enough to work under pressure, and recognizable from a favicon to a channel banner.</p></header>
+  <main>
+    <img class="board" src="active-shot-brand-board.png" alt="ActiveShot identity overview">
+    <section class="section"><span class="eyebrow">LOGO SYSTEM</span><h2>One frame. Every surface.</h2><div class="logos"><div class="card"><img src="logos/png/activeshot-logo-horizontal-light.png" alt="ActiveShot logo on light"><p>Primary light lockup</p></div><div class="card"><img src="logos/png/activeshot-logo-horizontal-dark.png" alt="ActiveShot logo on dark"><p>Primary dark lockup</p></div></div></section>
+    <section class="section"><span class="eyebrow">CORE PALETTE</span><h2>Built for contrast.</h2><div class="colors"><div class="swatch" style="background:#f47728"><strong>ACTION</strong><span>#F47728</span></div><div class="swatch dark" style="background:#1a1a1a"><strong>DARKROOM</strong><span>#1A1A1A</span></div><div class="swatch dark" style="background:#476e3d"><strong>FIELD</strong><span>#476E3D</span></div><div class="swatch" style="background:#f7f6f0"><strong>CONTACT</strong><span>#F7F6F0</span></div><div class="swatch" style="background:#e8e6dd"><strong>CREAM</strong><span>#E8E6DD</span></div><div class="swatch dark" style="background:#686761"><strong>EQUIPMENT</strong><span>#686761</span></div></div></section>
+    <section class="section"><span class="eyebrow">SOCIAL SYSTEM</span><h2>Templates that already belong together.</h2><div class="social"><div class="card"><img src="social/png/instagram-post-square-1080.png" alt="Square social template"><p>Square campaign post</p></div><div class="card"><img src="social/png/instagram-post-portrait-1080x1350.png" alt="Portrait social template"><p>Portrait feature post</p></div><div class="card"><img src="social/png/website-social-card-1200x630.png" alt="Website share card"><p>Website and sharing card</p></div><div class="card"><img src="social/png/x-header-1500x500.png" alt="Social profile header"><p>Wide channel header</p></div></div></section>
+    <section class="section"><span class="eyebrow">SOURCE FILES</span><h2>Ready to use and edit.</h2><div class="links"><a href="brand-guide.md">Brand guide</a><a href="asset-manifest.md">Asset manifest</a><a href="copy/social-copy-kit.md">Copy kit</a><a href="tokens/active-shot.tokens.json">Design tokens</a><a href="logos/svg/activeshot-logo-horizontal-light.svg">Primary SVG</a></div></section>
+    <footer>ActiveShot brand suite · activeshot.app</footer>
+  </main>
+</body>
+</html>

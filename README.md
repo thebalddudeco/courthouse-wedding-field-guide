@@ -8,6 +8,10 @@ A touch-friendly, offline-capable production app for street, editorial, wedding,
 
 ActiveShot includes purpose-built field guides, Prep / On Set / Wrap stages, must-get stars, a one-shot focus mode, reference images, drag-to-reorder shot lists, reusable gear kits, photographer prompts and exact posing scripts, notes, clean PDF export, multiple saved assignments, duplication, archiving, JSON backup and restore, and offline caching after the first visit.
 
+## Brand suite
+
+The complete ActiveShot logo system, app icons, social channel templates, design tokens, font files, copy kit, and usage guide live in [`brand/`](brand/README.md).
+
 ## Data and privacy
 
 Assignments, checkmarks, schedules, notes, gear lists and compressed reference images stay in the browser's local storage on the device where they are entered. They are not committed to this repository or sent to a database. Use **Backup data** before clearing browser storage or moving to another device. Cross-device sync is planned but is not active yet.
