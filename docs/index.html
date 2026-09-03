@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-  <meta name="theme-color" content="#232321">
+  <meta name="theme-color" content="#b9a173">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="apple-mobile-web-app-title" content="ShotFlow">
@@ -12,18 +12,18 @@
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="apple-touch-icon" href="icon-180.png">
   <link rel="icon" href="icon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="style.css?v=7">
+  <link rel="stylesheet" href="style.css?v=8">
 </head>
 <body>
   <header class="topbar">
     <div class="topbar-inner">
-      <button id="homeButton" class="brand-button" aria-label="Return to shoots"><span class="brand-mark">SF</span><span><small>PHOTOGRAPHY FIELD GUIDE</small><strong>ShotFlow</strong></span></button>
-      <div class="header-actions"><span id="saveStatus" class="save-status"><i></i> Saved</span><button id="installButton" class="ghost-button hidden">Install app</button><button id="moreButton" class="icon-button" aria-label="More options">•••</button></div>
+      <button id="homeButton" class="brand-button" aria-label="Return to shoots"><span class="brand-mark" aria-hidden="true"></span><span><strong>shotflow</strong><small>photography field guide</small></span></button>
+      <div class="header-actions"><span id="saveStatus" class="save-status"><i></i> Saved</span><button id="installButton" class="ghost-button hidden">Install app</button><button id="moreButton" class="icon-button" aria-label="More options">☰</button></div>
     </div>
   </header>
 
   <main id="homeView" class="page home-view">
-    <section class="home-heading"><div><span class="eyebrow">YOUR FIELD KIT</span><h1>What are you shooting?</h1><p>Start a new guide or continue a saved assignment.</p></div><button id="backupButton" class="secondary-button">⇩ Backup data</button></section>
+    <section class="home-heading"><div><span class="eyebrow">YOUR FIELD KIT</span><h1>Choose a field guide</h1><p>Start a new assignment or continue a saved shoot.</p></div><button id="backupButton" class="secondary-button">⇩ Backup data</button></section>
     <section id="typeGrid" class="type-grid" aria-label="New shoot types"></section>
     <section class="shoots-section"><div class="section-heading"><div><span class="eyebrow">ON DECK</span><h2>Active shoots</h2></div><span id="shootCount" class="count-pill">0</span></div><div id="shootList" class="shoot-list"></div></section>
     <section id="archiveSection" class="shoots-section hidden"><div class="section-heading"><div><span class="eyebrow">COMPLETED</span><h2>Archive</h2></div></div><div id="archiveList" class="shoot-list"></div></section>
@@ -57,7 +57,7 @@
   <input id="importInput" type="file" accept="application/json" hidden><input id="referenceInput" type="file" accept="image/*" hidden>
 
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
-  <script src="templates.js?v=7"></script>
-  <script src="app.js?v=7"></script>
+  <script src="templates.js?v=8"></script>
+  <script src="app.js?v=8"></script>
 </body>
 </html>
