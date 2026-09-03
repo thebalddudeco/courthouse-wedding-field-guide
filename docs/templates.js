@@ -1,6 +1,6 @@
 window.ACTIVESHOT_TEMPLATES={
  street:{
-  label:'Street',icon:'↗',color:'#22d3ee',description:'Light, layers, movement and decisive moments.',defaultName:'Street Walk',
+  label:'Street',icon:'↗',color:'#e47b28',description:'Light, layers, movement and decisive moments.',defaultName:'Street Walk',
   sections:[
    {id:'street-preflight',eyebrow:'Before the walk',title:'Field setup',icon:'◎',items:['Choose a visual theme or question for the walk','Check weather, sun direction and sunset time','Set camera clock, RAW, card space and spare battery','Choose one primary lens and one backup only','Set a safe starting exposure and focus mode','Map a loose route with exits and transit options','Review local restrictions and personal safety plan'],tip:'Give the walk a constraint: one lens, one color, one gesture or one kind of light. Constraints sharpen attention.'},
    {id:'street-establish',eyebrow:'Story layer · 01',title:'Place and atmosphere',icon:'⌂',items:['Wide location setter','Street name, sign or geographic clue','Architecture and repeating geometry','Weather, light and seasonal detail','Foreground layer that establishes depth','Reflection, shadow or silhouette','Clean vertical and horizontal city frame'],tip:'Build the environment before hunting isolated characters. The location should feel like a participant.'},
@@ -13,7 +13,7 @@ window.ACTIVESHOT_TEMPLATES={
   quick:['street-preflight-0','street-preflight-2','street-establish-0','street-people-0','street-people-2','street-movement-6','street-light-0','street-light-6','street-sequence-0','street-sequence-6','street-wrap-0','street-wrap-5']
  },
  editorial:{
-  label:'Editorial',icon:'◆',color:'#fb7185',description:'Concept, talent, wardrobe and publication coverage.',defaultName:'Editorial Production',
+  label:'Editorial',icon:'◆',color:'#476e3d',description:'Concept, talent, wardrobe and publication coverage.',defaultName:'Editorial Production',
   sections:[
    {id:'editorial-brief',eyebrow:'Creative direction',title:'Brief and story',icon:'◇',items:['Define the editorial premise in one sentence','Confirm intended publication and usage','List mandatory images, dimensions and orientations','Build mood, color and lighting references','Confirm location access and restrictions','Prepare call sheet and contact list','Identify hero image and cover-safe requirements','Confirm final delivery deadline'],tip:'Every setup should serve the same editorial idea. If a frame is beautiful but belongs to a different story, save it for another project.'},
    {id:'editorial-team',eyebrow:'Production',title:'Talent and team',icon:'●',items:['Talent names, pronouns and boundaries confirmed','Model releases or usage permissions handled','Stylist and wardrobe responsibilities confirmed','Hair and makeup timing confirmed','Assistant, digital tech and producer roles clear','Private changing area and comfort needs addressed','Breaks, water and food accounted for','Credits list started before wrap'],tip:'State the next setup before the team finishes the current one. Clear communication keeps creative momentum without rushing people.'},
@@ -26,7 +26,7 @@ window.ACTIVESHOT_TEMPLATES={
   quick:['editorial-brief-0','editorial-brief-2','editorial-team-0','editorial-gear-0','editorial-gear-5','editorial-look1-0','editorial-look1-3','editorial-look1-5','editorial-look1-6','editorial-look1-10','editorial-details-0','editorial-wrap-0','editorial-wrap-3']
  },
  wedding:{
-  label:'Wedding',icon:'♥',color:'#fbbf24',description:'Courthouse flow, family coverage and natural posing.',defaultName:'Wedding Assignment',
+  label:'Wedding',icon:'♥',color:'#e47b28',description:'Courthouse flow, family coverage and natural posing.',defaultName:'Wedding Assignment',
   sections:[
    {id:'wedding-preflight',eyebrow:'Before leaving',title:'Pre-shoot checklist',icon:'✓',items:['Time, address and exact meeting point confirmed','Venue access, security, flash and ceremony-position rules checked','Names, pronunciations, preferred terms, VIPs and mobility needs reviewed','Rings, IDs, documents, vows and designated item holder confirmed','Camera clocks synced; cards formatted; batteries and backup body ready','Lenses clean; RAW enabled; focus and test exposure checked','Weather, indoor backup, portrait route and departure alarm checked','Water, rain cover and compact bag packed'],tip:'Welcome: “I’ll guide you the whole way. Nothing has to feel stiff. Keep moving and reacting to each other, and I’ll adjust the little details.”'},
    {id:'wedding-before',eyebrow:'Wedding story · 01',title:'Before the ceremony',icon:'⌂',items:['Exterior establishing frames: facade, doors, steps and neighborhood','Arrival, greeting, walking in and venue signage','Security, elevator, hallway and waiting-room candids as permitted','Rings, bouquet, attire, shoes, vows and documents','Individual portraits of each partner','Quiet connection: hands, glances, nerves, laughter and family support'],tip:'Photograph the anticipation without interrupting it. Stay alert for hands, eye contact and small exchanges.'},
@@ -44,7 +44,7 @@ window.ACTIVESHOT_TEMPLATES={
   quick:['wedding-preflight-0','wedding-preflight-4','wedding-before-0','wedding-before-1','wedding-during-0','wedding-during-2','wedding-during-3','wedding-during-5','wedding-during-6','wedding-after-0','wedding-family-0','wedding-walk-0','wedding-kiss-0','wedding-kidnap-0','wedding-pretzel-0','wedding-camera-0','wedding-city-1']
  },
  custom:{
-  label:'Custom / Portrait',icon:'＋',color:'#a78bfa',description:'Build, duplicate and adapt your own field guide.',defaultName:'Portrait Session',
+  label:'Custom / Portrait',icon:'＋',color:'#476e3d',description:'Build, duplicate and adapt your own field guide.',defaultName:'Portrait Session',
   sections:[
    {id:'custom-plan',eyebrow:'Preparation',title:'Plan the session',icon:'◇',items:['Confirm time, location and meeting point','Define the purpose and intended use','Review subject preferences and boundaries','Build a short must-have list','Check weather, access and backup location','Prepare camera, cards and batteries'],tip:'Keep the must-have list short enough to protect space for discovery.'},
    {id:'custom-capture',eyebrow:'Core coverage',title:'Capture',icon:'▣',items:['Environmental wide','Full-length portrait','Three-quarter portrait','Waist-up portrait','Tight portrait','Vertical and horizontal versions','Clean look to camera','Expression away from camera','Movement or transition frame','Meaningful detail'],prompts:['“I’ll give you one direction at a time. Keep breathing and moving between frames.”','“Give me the clean version first. Now keep the shape and let the expression change.”'],tip:'Use Add item to tailor this section to the subject, concept or deliverable.'},

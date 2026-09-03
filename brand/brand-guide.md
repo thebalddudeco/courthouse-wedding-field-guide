@@ -14,6 +14,8 @@ ActiveShot is the field guide photographers open before the job and keep open wh
 
 The Active Frame combines four viewfinder corners, a constructed letter A, and a live orange indicator. It represents preparation becoming action inside the frame.
 
+The illustrated camera-A mark is the primary app icon and expressive brand mark. Its chunky ink contour, flat fills and slightly playful proportions establish the illustration language used across Prep, On Set and Wrap graphics.
+
 Use the horizontal logo for websites, decks, partnerships, and wide placements. Use the stacked logo for square or centered layouts. Use the mark alone for app icons, favicons, avatars, and small spaces.
 
 ### Clear space

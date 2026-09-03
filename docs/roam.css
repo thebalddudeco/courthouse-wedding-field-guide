@@ -267,7 +267,7 @@ button, input, textarea { font-family: var(--font-ui); }
 .topbar { background: var(--cream); }
 .topbar-inner { width: min(100%, 660px); min-height: 4.5rem; padding: .85rem 1.1rem; border: 0; background: var(--cream); box-shadow: none; }
 .brand-button { gap: .58rem; color: var(--charcoal); }
-.brand-mark { position: relative; display: grid; width: 2.2rem; height: 2.2rem; place-items: center; border: 1.5px solid var(--charcoal); border-radius: .42rem; background: var(--paper) url("icon.svg") center / 88% no-repeat; transform: none; }
+.brand-mark { position: relative; display: grid; width: 2.2rem; height: 2.2rem; place-items: center; border: 1.5px solid var(--charcoal); border-radius: .42rem; background: var(--paper) url("illustrations/activeshot-illustrated-mark-1024.png") center / 100% no-repeat; transform: none; }
 .brand-mark::after { content: none; }
 .brand-button strong { color: var(--charcoal); font-family: var(--font-mark); font-size: 1.18rem; font-weight: 400; letter-spacing: -.025em; }
 .brand-button small { margin-top: .22rem; color: var(--gray); font-size: .62rem; font-weight: 500; letter-spacing: .09em; }
@@ -303,7 +303,7 @@ button, input, textarea { font-family: var(--font-ui); }
 .shoot-copy small { color: var(--gold); font-weight: 600; }.shoot-copy strong { color: var(--charcoal); font-weight: 550; }.shoot-copy span { color: var(--gray); }
 .shoot-progress b { font-weight: 550; }.shoot-progress i { background: var(--charcoal); }.shoot-progress em { background: var(--olive); }
 .empty-state { padding: 1.6rem; border: 1.5px dashed var(--charcoal); border-radius: .9rem; background: var(--paper); color: var(--gray); text-align: center; }
-.empty-state span { display: block; color: var(--gold); }.empty-state strong { color: var(--charcoal); font-weight: 550; }
+.empty-state img { display: block; width: min(9rem, 42%); margin: 0 auto .75rem; }.empty-state strong { color: var(--charcoal); font-weight: 550; }
 
 .pixieset-cta { margin-top: 1.9rem; padding: 1.25rem; border: 1.5px solid var(--charcoal); border-radius: 1rem; background: var(--charcoal); }
 .pixieset-cta .eyebrow { background: var(--gold); color: var(--charcoal); }

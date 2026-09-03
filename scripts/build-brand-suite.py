@@ -8,6 +8,8 @@ FONTS = BRAND / "fonts"
 LOGOS = BRAND / "logos"
 ICONS = BRAND / "icons"
 SOCIAL = BRAND / "social"
+ILLUSTRATIONS = BRAND / "illustrations" / "png"
+ILLUSTRATED_MARK = ILLUSTRATIONS / "activeshot-illustrated-mark-1024.png"
 
 INK = "#1A1A1A"
 ORANGE = "#E47B28"
@@ -88,6 +90,9 @@ def draw_mark(draw, box, fg, accent):
 
 
 def save_icon(size, name, bg=ORANGE, fg=INK, accent=MOSS, radius=.22):
+    if ILLUSTRATED_MARK.exists():
+        Image.open(ILLUSTRATED_MARK).convert("RGB").resize((size, size), Image.Resampling.NEAREST).save(ICONS / "png" / name, optimize=True)
+        return
     scale = 4
     canvas = Image.new("RGB", (size*scale, size*scale), bg)
     draw = ImageDraw.Draw(canvas)
@@ -180,7 +185,11 @@ def brand_board():
     im = Image.new("RGB", (width, height), PAPER)
     d = ImageDraw.Draw(im)
     d.rectangle((0,0,690,height), fill=ORANGE)
-    draw_mark(d,(110,95,270),INK,MOSS)
+    if ILLUSTRATED_MARK.exists():
+        illustrated_mark = Image.open(ILLUSTRATED_MARK).convert("RGB").resize((330,330), Image.Resampling.NEAREST)
+        im.paste(illustrated_mark, (110,55))
+    else:
+        draw_mark(d,(110,95,270),INK,MOSS)
     d.text((110,425),"ActiveShot",font=font(ALFA,88),fill=INK)
     d.text((116,555),"WALK IN READY.",font=font(ALFA,50),fill=INK)
     d.text((116,640),"PHOTOGRAPHY FIELD GUIDES,\nBUILT FOR THE SHOOT.",font=font(INTER,28),fill=INK,spacing=14)
@@ -253,6 +262,10 @@ copy2(ICONS / "png" / "activeshot-icon-192.png", ROOT / "docs" / "icon-192.png")
 copy2(ICONS / "png" / "activeshot-icon-512.png", ROOT / "docs" / "icon-512.png")
 copy2(SOCIAL / "png" / "website-social-card-1200x630.png", ROOT / "docs" / "active-shot-social-card.png")
 copy2(LOGOS / "svg" / "activeshot-mark-ink.svg", ROOT / "docs" / "icon.svg")
+live_illustrations = ROOT / "docs" / "illustrations"
+live_illustrations.mkdir(parents=True, exist_ok=True)
+for illustration in ILLUSTRATIONS.glob("*.png"):
+    copy2(illustration, live_illustrations / illustration.name)
 brand_board()
 
 print("ActiveShot brand suite generated")

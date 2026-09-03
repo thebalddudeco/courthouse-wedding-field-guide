@@ -23,6 +23,17 @@
 
 The separate 512 px maskable icon has no rounded transparency so Android can safely apply its own device mask.
 
+## Illustrated graphics
+
+| Asset | Best use |
+|---|---|
+| `activeshot-illustrated-mark-1024.png` | Primary app mark, avatar and compact brand moments |
+| `activeshot-illustration-sheet-1600.png` | Full illustration-family presentation |
+| `prep-gear-1024.png` | Prep and equipment content |
+| `shot-list-1024.png` | Planning, lists and must-get frames |
+| `active-capture-1024.png` | On-set movement and active shooting |
+| `wrap-confirmed-1024.png` | Completion, backup and wrap content |
+
 ## Social templates
 
 | File | Canvas | Use |
@@ -37,4 +48,3 @@ The separate 512 px maskable icon has no rounded transparency so Android can saf
 | `website-social-card-1200x630` | 1200 × 630 | Website, Open Graph, X and messaging previews |
 
 Every social design is supplied as an editable SVG and a ready-to-use PNG. Keep important text away from extreme edges because channel-specific interface overlays and crops vary by device.
-
