@@ -3,8 +3,8 @@
   --as-ink: #1a1a1a;
   --as-action: #e47b28;
   --as-confirmed: #476e3d;
-  --as-font-display: "Alfa Slab One", Georgia, serif;
-  --as-font-ui: Inter, Arial, sans-serif;
+  --as-font-display: "Alfa Slab One";
+  --as-font-ui: "Inter";
   --as-rule-dark: rgb(26 26 26 / 22%);
   --as-rule-light: rgb(232 230 224 / 22%);
   --as-focus-ring: 0 0 0 3px rgb(228 123 40 / 35%);

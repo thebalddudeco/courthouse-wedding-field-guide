@@ -60,11 +60,11 @@ def lockup_svg(mode="light", stacked=False):
     if stacked:
         w, h = 720, 700
         symbol = mark_svg(fg, accent).replace('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="ActiveShot active frame mark">', '<g transform="translate(232 70) scale(1)">').replace('</svg>', '</g>')
-        body = f'''{symbol}<text x="360" y="420" text-anchor="middle" fill="{fg}" font-family="Alfa Slab One, Georgia, serif" font-size="86">Active<tspan fill="{accent}">Shot</tspan></text><text x="360" y="474" text-anchor="middle" fill="{fg}" opacity=".68" font-family="Inter, Arial, sans-serif" font-size="21" letter-spacing="5">PHOTOGRAPHY FIELD GUIDE</text>'''
+        body = f'''{symbol}<text x="360" y="420" text-anchor="middle" fill="{fg}" font-family="Alfa Slab One" font-size="86">Active<tspan fill="{accent}">Shot</tspan></text><text x="360" y="474" text-anchor="middle" fill="{fg}" opacity=".68" font-family="Inter" font-size="21" letter-spacing="5">PHOTOGRAPHY FIELD GUIDE</text>'''
     else:
         w, h = 1200, 320
         symbol = mark_svg(fg, accent).replace('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="ActiveShot active frame mark">', '<g transform="translate(42 32) scale(.98)">').replace('</svg>', '</g>')
-        body = f'''{symbol}<text x="330" y="154" fill="{fg}" font-family="Alfa Slab One, Georgia, serif" font-size="104">Active<tspan fill="{accent}">Shot</tspan></text><text x="336" y="207" fill="{fg}" opacity=".68" font-family="Inter, Arial, sans-serif" font-size="22" letter-spacing="6">PHOTOGRAPHY FIELD GUIDE</text>'''
+        body = f'''{symbol}<text x="330" y="154" fill="{fg}" font-family="Alfa Slab One" font-size="104">Active<tspan fill="{accent}">Shot</tspan></text><text x="336" y="207" fill="{fg}" opacity=".68" font-family="Inter" font-size="22" letter-spacing="6">PHOTOGRAPHY FIELD GUIDE</text>'''
     return f'''<svg xmlns="http://www.w3.org/2000/svg" width="{w}" height="{h}" viewBox="0 0 {w} {h}" role="img" aria-label="ActiveShot logo">
 <style>@font-face{{font-family:'Alfa Slab One';src:url('../../fonts/AlfaSlabOne-Regular.ttf')}}@font-face{{font-family:'Inter';src:url('../../fonts/Inter-Variable.ttf')}}</style>
 <rect width="100%" height="100%" fill="{bg}"/>{body}</svg>'''
@@ -165,14 +165,14 @@ def social_image(name, width, height, headline, subhead="PHOTOGRAPHY FIELD GUIDE
     im.save(SOCIAL / "png" / f"{name}.png", optimize=True)
     svg_lines = []
     for i,line_text in enumerate(lines):
-        svg_lines.append(f'<text x="{margin}" y="{y-total_h+i*line_h}" fill="{text_fill}" font-family="Alfa Slab One, Georgia, serif" font-size="{headline_font.size}">{line_text}</text>')
+        svg_lines.append(f'<text x="{margin}" y="{y-total_h+i*line_h}" fill="{text_fill}" font-family="Alfa Slab One" font-size="{headline_font.size}">{line_text}</text>')
     if layout == "split":
         svg_bg = f'<rect width="100%" height="{int(height*.62)}" fill="{ORANGE}"/><rect y="{int(height*.62)}" width="100%" height="{height-int(height*.62)}" fill="{INK}"/>'
     elif layout == "dark":
         svg_bg = f'<rect width="100%" height="100%" fill="{INK}"/><rect x="{int(width*.70)}" width="{width-int(width*.70)}" height="100%" fill="{ORANGE}"/><circle cx="{int(width*.71)}" cy="{int(height*.12)+int(width*.07)}" r="{int(width*.07)}" fill="{MOSS}"/>'
     else:
         svg_bg = f'<rect width="100%" height="100%" fill="{CREAM}"/><rect width="{int(width*.16)}" height="100%" fill="{MOSS}"/><rect x="{int(width*.16)}" width="{int(width*.03)}" height="100%" fill="{ORANGE}"/>'
-    save_text(SOCIAL / "svg" / f"{name}.svg", f'''<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}"><style>@font-face{{font-family:'Alfa Slab One';src:url('../../fonts/AlfaSlabOne-Regular.ttf')}}@font-face{{font-family:'Inter';src:url('../../fonts/Inter-Variable.ttf')}}</style>{svg_bg}{mark_group_svg(margin,margin,mark_size,mark_fg,mark_accent)}<text x="{margin+mark_size+max(18,int(mark_size*.2))}" y="{margin+int(mark_size*.48)}" fill="{mark_fg}" font-family="Inter,Arial,sans-serif" font-size="{label_font.size}" letter-spacing="2">ACTIVE SHOT</text>{''.join(svg_lines)}<text x="{margin}" y="{sub_y+sub_font.size}" fill="{sub_color}" font-family="Inter,Arial,sans-serif" font-size="{sub_font.size}" letter-spacing="2">{subhead}</text><line x1="{margin}" y1="{height-margin}" x2="{width-margin}" y2="{height-margin}" stroke="{ORANGE if layout!='split' else PAPER}" stroke-width="4"/></svg>''')
+    save_text(SOCIAL / "svg" / f"{name}.svg", f'''<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}"><style>@font-face{{font-family:'Alfa Slab One';src:url('../../fonts/AlfaSlabOne-Regular.ttf')}}@font-face{{font-family:'Inter';src:url('../../fonts/Inter-Variable.ttf')}}</style>{svg_bg}{mark_group_svg(margin,margin,mark_size,mark_fg,mark_accent)}<text x="{margin+mark_size+max(18,int(mark_size*.2))}" y="{margin+int(mark_size*.48)}" fill="{mark_fg}" font-family="Inter" font-size="{label_font.size}" letter-spacing="2">ACTIVE SHOT</text>{''.join(svg_lines)}<text x="{margin}" y="{sub_y+sub_font.size}" fill="{sub_color}" font-family="Inter" font-size="{sub_font.size}" letter-spacing="2">{subhead}</text><line x1="{margin}" y1="{height-margin}" x2="{width-margin}" y2="{height-margin}" stroke="{ORANGE if layout!='split' else PAPER}" stroke-width="4"/></svg>''')
 
 
 def brand_board():

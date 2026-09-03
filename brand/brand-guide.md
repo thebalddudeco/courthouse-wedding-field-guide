@@ -53,6 +53,8 @@ Action should be memorable, not constant. Ink and Screen carry most layouts; Con
 
 Avoid extra-bold body text, condensed display fonts, and long paragraphs set in Alfa Slab One.
 
+These are the only two typefaces in the ActiveShot system. Do not introduce substitutes, decorative alternates, or platform-system fonts.
+
 ## Graphic language
 
 - Use hard cuts, broad color fields, viewfinder corners, crop marks, sequence numbers, and thin rules.

@@ -13,3 +13,8 @@ body[data-theme="darkroom"]{--page:#4a4a49;--surface:#232323;--surface2:#2d2b28;
 body[data-theme="technical"] .must-card{--card-text:#f7f7f4}
 body[data-theme="gallery"] .must-card{--card-text:#f5f0e7}
 body[data-theme="darkroom"] .must-card{--card-text:#f1e8d7}
+
+/* ActiveShot typography lock: no typefaces beyond Alfa Slab One and Inter. */
+@font-face{font-family:"Alfa Slab One";src:url("fonts/alfa-slab-one.woff2") format("woff2");font-style:normal;font-weight:400;font-display:swap}
+@font-face{font-family:"Inter";src:url("fonts/inter-latin.woff2") format("woff2");font-style:normal;font-weight:100 900;font-display:swap}
+body,body[data-theme]{--font:"Inter"!important;--display:"Alfa Slab One"!important;font-family:var(--font)!important}
