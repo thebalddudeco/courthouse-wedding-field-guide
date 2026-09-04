@@ -267,7 +267,7 @@ button, input, textarea { font-family: var(--font-ui); }
 .topbar { background: var(--cream); }
 .topbar-inner { width: min(100%, 660px); min-height: 4.5rem; padding: .85rem 1.1rem; border: 0; background: var(--cream); box-shadow: none; }
 .brand-button { gap: .58rem; color: var(--charcoal); }
-.brand-mark { position: relative; display: grid; width: 2.2rem; height: 2.2rem; place-items: center; border: 0; border-radius: .38rem; background: var(--green) url("illustrations/activeshot-illustrated-mark-1024.png") center / 100% no-repeat; transform: none; }
+.brand-mark { position: relative; display: block; width: 2.55rem; height: 2.55rem; flex: 0 0 2.55rem; border: 0; border-radius: .38rem; background: var(--olive); object-fit: cover; transform: none; }
 .brand-mark::after { content: none; }
 .brand-button strong { color: var(--charcoal); font-family: var(--font-mark); font-size: 1.18rem; font-weight: 400; letter-spacing: -.025em; }
 .brand-button small { margin-top: .22rem; color: var(--gray); font-size: .62rem; font-weight: 500; letter-spacing: .09em; }
