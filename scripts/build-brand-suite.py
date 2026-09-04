@@ -35,24 +35,29 @@ def save_text(path, text):
 
 
 def mark_svg(fg=INK, accent=ORANGE, bg=None, rounded=False):
-    backdrop = ""
-    if bg:
-        rx = 56 if rounded else 0
-        backdrop = f'<rect width="256" height="256" rx="{rx}" fill="{bg}"/>'
-    return f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="ActiveShot active frame mark">
-{backdrop}
-<g fill="none" stroke="{fg}" stroke-width="12" stroke-linecap="square">
-  <path d="M48 92V48h44"/><path d="M164 48h44v44"/>
-  <path d="M208 164v44h-44"/><path d="M92 208H48v-44"/>
+    return f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="ActiveShot framed A mark">
+<rect width="256" height="256" fill="{MOSS}"/>
+<g fill="none" stroke-linecap="butt" stroke-linejoin="round">
+  <g stroke="{INK}" stroke-width="18"><path d="M35 78V35h43"/><path d="M178 35h43v43"/><path d="M221 178v43h-43"/><path d="M78 221H35v-43"/></g>
+  <g stroke="{PAPER}" stroke-width="8"><path d="M35 78V35h43"/><path d="M178 35h43v43"/><path d="M221 178v43h-43"/><path d="M78 221H35v-43"/></g>
 </g>
-<path d="M78 184 124 70h10l46 114h-25l-10-27h-34l-10 27H78Zm41-48h18l-9-27-9 27Z" fill="{fg}"/>
-<circle cx="183" cy="75" r="14" fill="{accent}"/>
+<path d="M62 194 108 55h40l46 139h-35l-10-30h-42l-10 30Z" fill="{ORANGE}" stroke="{INK}" stroke-width="8" stroke-linejoin="round"/>
+<path d="m128 99-15 43h30Z" fill="{MOSS}" stroke="{INK}" stroke-width="7" stroke-linejoin="round"/>
 </svg>'''
 
 
 def mark_group_svg(x, y, size, fg, accent):
     s = size / 256
-    return f'''<g transform="translate({x} {y}) scale({s})"><g fill="none" stroke="{fg}" stroke-width="12" stroke-linecap="square"><path d="M48 92V48h44"/><path d="M164 48h44v44"/><path d="M208 164v44h-44"/><path d="M92 208H48v-44"/></g><path d="M78 184 124 70h10l46 114h-25l-10-27h-34l-10 27H78Zm41-48h18l-9-27-9 27Z" fill="{fg}"/><circle cx="183" cy="75" r="14" fill="{accent}"/></g>'''
+    content = mark_svg().replace('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="ActiveShot framed A mark">', '').replace('</svg>', '')
+    return f'''<g transform="translate({x} {y}) scale({s})">{content}</g>'''
+
+
+def mark_bitmap(size):
+    return Image.open(ILLUSTRATED_MARK).convert("RGB").resize((size, size), Image.Resampling.NEAREST)
+
+
+def paste_mark(canvas, x, y, size):
+    canvas.paste(mark_bitmap(size), (round(x), round(y)))
 
 
 def lockup_svg(mode="light", stacked=False):
@@ -150,7 +155,7 @@ def social_image(name, width, height, headline, subhead="PHOTOGRAPHY FIELD GUIDE
         text_fill = INK
     margin = max(32, int(min(width,height)*.075))
     mark_size = max(64, int(min(width,height)*.18))
-    draw_mark(d,(margin,margin,mark_size),mark_fg,mark_accent)
+    paste_mark(im, margin, margin, mark_size)
     label_font = font(INTER,max(18,int(min(width,height)*.025)))
     d.text((margin+mark_size+max(18,int(mark_size*.2)),margin+int(mark_size*.30)),"ACTIVE SHOT",font=label_font,fill=mark_fg,stroke_width=0)
     maxw = width-margin*2
@@ -237,7 +242,7 @@ social_image("website-social-card-1200x630",1200,630,"PREP. SHOOT.\nWRAP.",layou
 for mode in ["light","dark"]:
     im = Image.new("RGB",(1800,480),PAPER if mode=="light" else INK)
     d = ImageDraw.Draw(im)
-    draw_mark(d,(54,72,336),INK if mode=="light" else PAPER,ORANGE)
+    paste_mark(im,54,72,336)
     draw_wordmark(d,440,132,150,light=(mode=="dark"))
     d.text((450,315),"PHOTOGRAPHY FIELD GUIDE",font=font(INTER,30),fill=GRAY if mode=="light" else CREAM)
     im.save(LOGOS / "png" / f"activeshot-logo-horizontal-{mode}.png",optimize=True)
@@ -247,13 +252,12 @@ for mode in ["ink","reversed"]:
     fg = INK if mode == "ink" else PAPER
     transparent = Image.new("RGBA",(1800,480),(0,0,0,0))
     td = ImageDraw.Draw(transparent)
-    draw_mark(td,(54,72,336),fg,ORANGE)
+    transparent.paste(mark_bitmap(336).convert("RGBA"),(54,72))
     draw_wordmark(td,440,132,150,light=(mode=="reversed"))
     td.text((450,315),"PHOTOGRAPHY FIELD GUIDE",font=font(INTER,30),fill=GRAY if mode=="ink" else CREAM)
     transparent.save(LOGOS / "png" / f"activeshot-logo-horizontal-transparent-{mode}.png",optimize=True)
     symbol = Image.new("RGBA",(1024,1024),(0,0,0,0))
-    sd = ImageDraw.Draw(symbol)
-    draw_mark(sd,(90,90,844),fg,ORANGE)
+    symbol.paste(mark_bitmap(844).convert("RGBA"),(90,90))
     symbol.save(LOGOS / "png" / f"activeshot-mark-transparent-{mode}-1024.png",optimize=True)
 
 # Put production icons and share card into the live app.

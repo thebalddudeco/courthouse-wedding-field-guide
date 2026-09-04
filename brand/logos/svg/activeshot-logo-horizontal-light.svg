@@ -1,11 +1,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="320" viewBox="0 0 1200 320" role="img" aria-label="ActiveShot logo">
 <style>@font-face{font-family:'Alfa Slab One';src:url('../../fonts/AlfaSlabOne-Regular.ttf')}@font-face{font-family:'Inter';src:url('../../fonts/Inter-Variable.ttf')}</style>
-<rect width="100%" height="100%" fill="#E8E6E0"/><g transform="translate(42 32) scale(.98)">
-
-<g fill="none" stroke="#1A1A1A" stroke-width="12" stroke-linecap="square">
-  <path d="M48 92V48h44"/><path d="M164 48h44v44"/>
-  <path d="M208 164v44h-44"/><path d="M92 208H48v-44"/>
+<rect width="100%" height="100%" fill="#E8E6E0"/><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="ActiveShot framed A mark">
+<rect width="256" height="256" fill="#476E3D"/>
+<g fill="none" stroke-linecap="butt" stroke-linejoin="round">
+  <g stroke="#1A1A1A" stroke-width="18"><path d="M35 78V35h43"/><path d="M178 35h43v43"/><path d="M221 178v43h-43"/><path d="M78 221H35v-43"/></g>
+  <g stroke="#E8E6E0" stroke-width="8"><path d="M35 78V35h43"/><path d="M178 35h43v43"/><path d="M221 178v43h-43"/><path d="M78 221H35v-43"/></g>
 </g>
-<path d="M78 184 124 70h10l46 114h-25l-10-27h-34l-10 27H78Zm41-48h18l-9-27-9 27Z" fill="#1A1A1A"/>
-<circle cx="183" cy="75" r="14" fill="#E47B28"/>
+<path d="M62 194 108 55h40l46 139h-35l-10-30h-42l-10 30Z" fill="#E47B28" stroke="#1A1A1A" stroke-width="8" stroke-linejoin="round"/>
+<path d="m128 99-15 43h30Z" fill="#476E3D" stroke="#1A1A1A" stroke-width="7" stroke-linejoin="round"/>
 </g><text x="330" y="154" fill="#1A1A1A" font-family="Alfa Slab One" font-size="104">Active<tspan fill="#E47B28">Shot</tspan></text><text x="336" y="207" fill="#1A1A1A" font-family="Inter" font-size="22" letter-spacing="6">PHOTOGRAPHY FIELD GUIDE</text></svg>

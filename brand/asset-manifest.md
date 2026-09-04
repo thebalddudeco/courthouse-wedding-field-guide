@@ -27,7 +27,8 @@ The separate 512 px maskable icon has no rounded transparency so Android can saf
 
 | Asset | Best use |
 |---|---|
-| `activeshot-illustrated-mark-1024.png` | Primary app mark, avatar and compact brand moments |
+| `activeshot-primary-mark-1254.png` | Color-corrected master of the approved framed-A artwork |
+| `activeshot-illustrated-mark-1024.png` | Production app mark, avatar and compact brand moments |
 | `activeshot-illustration-sheet-1600.png` | Full illustration-family presentation |
 | `prep-gear-1024.png` | Prep and equipment content |
 | `shot-list-1024.png` | Planning, lists and must-get frames |
