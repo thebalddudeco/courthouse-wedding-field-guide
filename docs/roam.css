@@ -356,6 +356,17 @@ dialog { border: 1.5px solid var(--charcoal); border-radius: 1rem; background: v
 
 @media (max-width: 430px) { .topbar-inner, .page { padding-right: .85rem; padding-left: .85rem; } .type-grid { gap: .55rem; } .type-card { min-height: 8.5rem; padding: .75rem; } .type-copy small { font-size: .7rem; } .assignment-card { margin-right: 0; margin-left: 0; } .stage-tabs, .guide-sections { margin-right: 0; margin-left: 0; } .guide-section summary, .section-body { padding-right: .8rem; padding-left: .8rem; } }
 
+/* Comfortable editorial typography */
+body { line-height: 1.55; letter-spacing: 0; }
+.brand-button strong { line-height: 1.08; letter-spacing: 0; }
+.brand-button small { line-height: 1.25; }
+.home-heading h1 { margin: .82rem 0 .68rem; line-height: 1.16; letter-spacing: .005em; }
+.home-heading p { line-height: 1.62; }
+.type-copy strong, .section-heading h2, .pixieset-cta h2, .shoot-name, .section-title strong, .quick-head h2, dialog h2 { line-height: 1.22; letter-spacing: 0; }
+.type-copy small, .shoot-copy span, .section-title small, .quick-head p, dialog label > span { line-height: 1.5; }
+.shoot-copy strong { line-height: 1.3; letter-spacing: 0; }
+.focus-shell h2 { line-height: 1.14; letter-spacing: 0; }
+
 @media print {
   :root { color-scheme: light; }
   body { background: var(--paper) !important; color: var(--charcoal) !important; }
