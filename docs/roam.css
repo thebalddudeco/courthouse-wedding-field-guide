@@ -130,10 +130,12 @@ body:has(.guide-view:not(.hidden)) .icon-button { border-color: var(--rule); }
 .progress-ring { position: relative; display: grid; width: 3.55rem; height: 3.55rem; flex: none; place-items: center; border-radius: 50%; background: conic-gradient(var(--gold) var(--progress), var(--olive) 0); }
 .progress-ring::after { content: ""; position: absolute; inset: .25rem; border-radius: 50%; background: var(--charcoal); }
 .progress-ring strong { position: relative; z-index: 1; font-size: .76rem; font-weight: 500; }
-.meta-grid { display: grid; grid-template-columns: 1fr; gap: .65rem; margin-top: 1.1rem; }
+.meta-grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: .65rem; min-width: 0; margin-top: 1.1rem; }
+.meta-grid > label { display: block; min-width: 0; }
 .meta-grid label > span { display: block; margin-bottom: .25rem; color: var(--gold); font-size: .7rem; font-weight: 500; letter-spacing: .09em; text-transform: uppercase; }
-input, textarea { width: 100%; border: 0; border-bottom: 1px solid var(--charcoal); border-radius: 0; background: transparent; color: var(--paper); font-size: 1rem; outline: none; }
+input, textarea { width: 100%; min-width: 0; max-width: 100%; border: 0; border-bottom: 1px solid var(--charcoal); border-radius: 0; background: transparent; color: var(--paper); font-size: 1rem; outline: none; }
 input { height: 2.9rem; padding: 0 .65rem; }
+input[type="datetime-local"] { display: block; inline-size: 100%; min-inline-size: 0; max-inline-size: 100%; }
 textarea { min-height: 5rem; padding: .7rem .65rem; resize: vertical; }
 input:focus, textarea:focus { border-color: var(--gold); }
 ::placeholder { color: var(--gray); }
@@ -147,9 +149,9 @@ input:focus, textarea:focus { border-color: var(--gold); }
 .stage-tabs { position: sticky; top: 4.75rem; z-index: 10; display: grid; grid-template-columns: repeat(4,1fr); gap: 1px; margin: 0 -1.25rem; background: var(--olive); }
 .stage-tabs button { min-height: 2.85rem; border: 0; background: var(--gold); color: var(--charcoal); font-size: .73rem; font-weight: 500; letter-spacing: .055em; text-transform: uppercase; }
 .stage-tabs button.active { background: var(--olive); color: var(--paper); }
-.shortcuts { display: flex; gap: .45rem; margin: .85rem -1.25rem 0; padding: 0 1.25rem .2rem; overflow-x: auto; scrollbar-width: none; }
+.shortcuts { display: flex; flex-wrap: wrap; gap: .45rem; min-width: 0; margin: .85rem -1.25rem 0; padding: 0 1.25rem .2rem; overflow: visible; }
 .shortcuts::-webkit-scrollbar { display: none; }
-.shortcuts button { min-height: 2.4rem; flex: none; padding: 0 .85rem; border: 0; border-bottom: 1px solid var(--gold); background: transparent; color: var(--paper); font-size: .8rem; font-weight: 400; }
+.shortcuts button { min-height: 2.4rem; max-width: 100%; flex: none; padding: .45rem .85rem; border: 0; border-bottom: 1px solid var(--gold); background: transparent; color: var(--paper); font-size: .8rem; font-weight: 400; line-height: 1.25; white-space: normal; }
 .view-actions { display: flex; gap: .5rem; margin-top: .8rem; }
 
 .guide-sections { display: grid; gap: 0; margin: .9rem -1.25rem 0; border-top: 1px solid var(--rule); }
