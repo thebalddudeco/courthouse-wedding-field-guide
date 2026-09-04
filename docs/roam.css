@@ -369,6 +369,12 @@ body { line-height: 1.55; letter-spacing: 0; }
 .type-copy small { min-height: 3em; margin-top: 0; }
 .shoot-copy strong { line-height: 1.3; letter-spacing: 0; }
 .focus-shell h2 { line-height: 1.14; letter-spacing: 0; }
+#installButton { min-height: 2.55rem; padding: 0 .8rem; white-space: nowrap; }
+.install-guide { color: var(--charcoal); font-size: .96rem; line-height: 1.6; }
+.install-guide p { margin: 0 0 .8rem; }
+.install-guide ol { margin: 0 0 .9rem; padding-left: 1.35rem; }
+.install-guide li + li { margin-top: .42rem; }
+@media (max-width: 540px) { .save-status { display: none; } #installButton { padding: 0 .68rem; } }
 
 @media print {
   :root { color-scheme: light; }
