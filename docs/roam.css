@@ -416,6 +416,58 @@ body { line-height: 1.55; letter-spacing: 0; }
 }
 @media (max-width: 350px) { #installButton { padding: 0 .52rem; } .brand-mark { width: 2rem; height: 2rem; flex-basis: 2rem; } }
 
+/* ActiveShot illustrated icon system */
+.as-icon {
+  display: block;
+  width: 1.2rem;
+  height: 1.2rem;
+  flex: none;
+  overflow: visible;
+}
+.as-icon > * {
+  stroke: var(--charcoal);
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  vector-effect: non-scaling-stroke;
+}
+.as-icon .icon-green { fill: var(--olive); }
+.as-icon .icon-orange { fill: var(--gold); }
+.as-icon .icon-cream { fill: var(--paper); }
+.as-icon .icon-ink { fill: var(--charcoal); }
+.as-icon .icon-line { fill: none; }
+.type-icon .as-icon, .shoot-mode .as-icon, .section-icon .as-icon, .quick-icon .as-icon { width: 1.35rem; height: 1.35rem; }
+.type-arrow .as-icon { width: 1.1rem; height: 1.1rem; }
+.icon-button, .back-button, .primary-button, .secondary-button, .focus-star, .reference-empty, .add-item, .pixieset-cta a, .must-count, .must-heading, .notes-label, .quick-row button, .menu-actions button {
+  display: inline-flex;
+  align-items: center;
+  gap: .42rem;
+}
+.icon-button { justify-content: center; }
+.icon-button .as-icon { width: 1.25rem; height: 1.25rem; }
+.back-button .as-icon, .primary-button .as-icon, .secondary-button .as-icon, .pixieset-cta a .as-icon { width: 1rem; height: 1rem; }
+.mode-pill { gap: .35rem; }
+.mode-pill .as-icon { width: .95rem; height: .95rem; }
+.drag-handle .as-icon, .star-button .as-icon, .ref-button .as-icon, .remove-gear .as-icon { width: 1.15rem; height: 1.15rem; margin: auto; }
+.star-button:not(.active) .icon-orange, .focus-star:not(.active) .icon-orange { fill: var(--paper); }
+.notes-label .as-icon, .must-heading .as-icon, .must-count .as-icon, .quick-row button .as-icon { width: .9rem; height: .9rem; }
+.chevron .as-icon { width: .9rem; height: .9rem; }
+.menu-actions button .as-icon { width: 1.2rem; height: 1.2rem; }
+.dialog-close { display: grid; place-items: center; }
+.dialog-close .as-icon { width: 1.15rem; height: 1.15rem; }
+.focus-actions button { display: inline-flex; align-items: center; justify-content: center; gap: .45rem; }
+.quick-row button span { min-width: 0; }
+.check-row input:checked::after, .quick-row input:checked::after {
+  content: "";
+  display: block;
+  width: .32rem;
+  height: .62rem;
+  margin: .12rem auto 0;
+  border: solid var(--paper);
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
 /* Installed iPhone/iPad apps can draw beneath the system status bar. */
 .topbar-inner {
   min-height: calc(4.5rem + var(--safe-top));

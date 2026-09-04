@@ -22,52 +22,53 @@
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="apple-touch-icon" href="icon-180.png">
   <link rel="icon" href="icon-192.png" type="image/png">
-  <link rel="stylesheet" href="roam.css?v=28">
+  <link rel="stylesheet" href="roam.css?v=29">
+  <script src="icons.js?v=29"></script>
 </head>
 <body>
   <header class="topbar">
     <div class="topbar-inner">
       <button id="homeButton" class="brand-button" aria-label="Return to shoots"><img class="brand-mark" src="illustrations/activeshot-illustrated-mark-1024.png" alt="" aria-hidden="true"><span><strong>activeshot</strong><small>photography field guide</small></span></button>
-      <div class="header-actions"><span id="saveStatus" class="save-status"><i></i> Saved</span><button id="installButton" class="ghost-button">Install app</button><button id="moreButton" class="icon-button" aria-label="More options">☰</button></div>
+      <div class="header-actions"><span id="saveStatus" class="save-status"><i></i> Saved</span><button id="installButton" class="ghost-button">Install app</button><button id="moreButton" class="icon-button" aria-label="More options"><span data-icon="menu"></span></button></div>
     </div>
   </header>
 
   <main id="homeView" class="page home-view">
-    <section class="home-heading"><div><span class="eyebrow">YOUR FIELD KIT</span><h1>What are you shooting?</h1><p>Pick a guide and walk into the shoot ready.</p></div><button id="backupButton" class="secondary-button">⇩ Backup data</button></section>
+    <section class="home-heading"><div><span class="eyebrow">YOUR FIELD KIT</span><h1>What are you shooting?</h1><p>Pick a guide and walk into the shoot ready.</p></div><button id="backupButton" class="secondary-button"><span data-icon="download"></span><span>Backup data</span></button></section>
     <section id="typeGrid" class="type-grid" aria-label="New shoot types"></section>
     <section class="shoots-section"><div class="section-heading"><div><span class="eyebrow">ON DECK</span><h2>Active shoots</h2></div><span id="shootCount" class="count-pill">0</span></div><div id="shootList" class="shoot-list"></div></section>
     <section id="archiveSection" class="shoots-section hidden"><div class="section-heading"><div><span class="eyebrow">COMPLETED</span><h2>Archive</h2></div></div><div id="archiveList" class="shoot-list"></div></section>
-    <section class="pixieset-cta"><span class="eyebrow">AFTER THE SHOOT</span><h2>Need a better home for your client work?</h2><p>I use Pixieset for my own photography website and genuinely recommend it. It can keep client projects together, deliver and share galleries, handle bookings, contracts, invoices and payments, and even power your website.</p><a href="https://pixieset.com/" target="_blank" rel="noopener noreferrer">Explore Pixieset <span>↗</span></a><small>Personal recommendation · Not sponsored · Not an affiliate link</small></section>
+    <section class="pixieset-cta"><span class="eyebrow">AFTER THE SHOOT</span><h2>Need a better home for your client work?</h2><p>I use Pixieset for my own photography website and genuinely recommend it. It can keep client projects together, deliver and share galleries, handle bookings, contracts, invoices and payments, and even power your website.</p><a href="https://pixieset.com/" target="_blank" rel="noopener noreferrer">Explore Pixieset <span data-icon="arrowRight"></span></a><small>Personal recommendation · Not sponsored · Not an affiliate link</small></section>
   </main>
 
   <main id="guideView" class="page guide-view hidden">
     <section class="assignment-card">
-      <div class="assignment-top"><button id="backButton" class="back-button">← Shoots</button><span id="modePill" class="mode-pill"></span><button id="guideMenuButton" class="icon-button" aria-label="Guide options">•••</button></div>
+      <div class="assignment-top"><button id="backButton" class="back-button"><span data-icon="back"></span><span>Shoots</span></button><span id="modePill" class="mode-pill"></span><button id="guideMenuButton" class="icon-button" aria-label="Guide options"><span data-icon="menu"></span></button></div>
       <div class="title-row"><div><span id="guideEyebrow" class="eyebrow"></span><input id="shootName" class="shoot-name" aria-label="Shoot name"></div><div class="progress-ring" id="progressRing"><strong id="progressPercent">0%</strong></div></div>
       <div class="meta-grid"><label><span>Date / time</span><span class="date-field-frame"><input id="shootDate" type="datetime-local"></span></label><label><span>Location</span><input id="shootLocation" placeholder="Location or meeting point"></label><label><span>People / subject</span><input id="shootPeople" placeholder="Client, model, couple or subject"></label></div>
       <textarea id="shootBrief" class="brief" placeholder="Creative brief, must-haves, sensitivities, access notes…"></textarea>
-      <div class="progress-line"><span id="progressCount">0 / 0 complete</span><span id="mustCount" class="must-count">★ 0 must-get left</span><div class="progress"><i id="progressBar"></i></div></div>
+      <div class="progress-line"><span id="progressCount">0 / 0 complete</span><span id="mustCount" class="must-count"><span data-icon="star"></span><span>0 must-get left</span></span><div class="progress"><i id="progressBar"></i></div></div>
     </section>
 
     <div id="stageTabs" class="stage-tabs" role="tablist"><button class="active" data-stage="all">All</button><button data-stage="prep">Prep</button><button data-stage="onset">On Set</button><button data-stage="wrap">Wrap</button></div>
     <nav id="sectionNav" class="shortcuts" aria-label="Guide sections"></nav>
-    <div class="view-actions"><button id="quickToggle" class="primary-button">▶ Start On Set mode</button><button id="addSectionButton" class="secondary-button hidden">＋ Add section</button></div>
+    <div class="view-actions"><button id="quickToggle" class="primary-button"><span data-icon="play"></span><span>Start On Set mode</span></button><button id="addSectionButton" class="secondary-button hidden"><span data-icon="add"></span><span>Add section</span></button></div>
     <div id="guideSections" class="guide-sections"></div>
     <section id="quickReference" class="quick-reference"></section>
-    <section class="pixieset-cta"><span class="eyebrow">AFTER THE SHOOT</span><h2>Ready to deliver the work?</h2><p>I use Pixieset for my own photography website and genuinely recommend it for organizing client projects, sharing galleries, booking, contracts, invoices and payments.</p><a href="https://pixieset.com/" target="_blank" rel="noopener noreferrer">Check out Pixieset <span>↗</span></a><small>Personal recommendation · Not sponsored · Not an affiliate link</small></section>
+    <section class="pixieset-cta"><span class="eyebrow">AFTER THE SHOOT</span><h2>Ready to deliver the work?</h2><p>I use Pixieset for my own photography website and genuinely recommend it for organizing client projects, sharing galleries, booking, contracts, invoices and payments.</p><a href="https://pixieset.com/" target="_blank" rel="noopener noreferrer">Check out Pixieset <span data-icon="arrowRight"></span></a><small>Personal recommendation · Not sponsored · Not an affiliate link</small></section>
   </main>
 
-  <div id="bottomBar" class="bottom-bar hidden"><button id="bottomBack">←</button><div><strong id="bottomTitle"></strong><span id="bottomProgress"></span></div><button id="bottomQuick">Quick</button></div>
+  <div id="bottomBar" class="bottom-bar hidden"><button id="bottomBack" aria-label="Back to shoots"><span data-icon="back"></span></button><div><strong id="bottomTitle"></strong><span id="bottomProgress"></span></div><button id="bottomQuick">Quick</button></div>
 
-  <dialog id="newShootDialog"><form method="dialog" id="newShootForm"><button type="button" class="dialog-close" data-close="newShootDialog" aria-label="Close">×</button><span id="dialogType" class="mode-pill"></span><h2>New assignment</h2><label><span>Name</span><input id="newShootName" required placeholder="Give this shoot a name"></label><label><span>Date</span><span class="date-field-frame"><input id="newShootDate" type="datetime-local"></span></label><label><span>Location</span><input id="newShootLocation" placeholder="Optional"></label><div class="dialog-actions"><button type="button" data-close="newShootDialog" class="secondary-button">Cancel</button><button id="createShootButton" value="default" class="primary-button">Create guide</button></div></form></dialog>
+  <dialog id="newShootDialog"><form method="dialog" id="newShootForm"><button type="button" class="dialog-close" data-close="newShootDialog" aria-label="Close"><span data-icon="close"></span></button><span id="dialogType" class="mode-pill"></span><h2>New assignment</h2><label><span>Name</span><input id="newShootName" required placeholder="Give this shoot a name"></label><label><span>Date</span><span class="date-field-frame"><input id="newShootDate" type="datetime-local"></span></label><label><span>Location</span><input id="newShootLocation" placeholder="Optional"></label><div class="dialog-actions"><button type="button" data-close="newShootDialog" class="secondary-button">Cancel</button><button id="createShootButton" value="default" class="primary-button">Create guide</button></div></form></dialog>
 
-  <dialog id="menuDialog"><form method="dialog"><button class="dialog-close" value="cancel">×</button><h2 id="menuTitle">App options</h2><div id="menuActions" class="menu-actions"></div></form></dialog>
-  <dialog id="itemDialog"><form method="dialog" id="itemForm"><button type="button" class="dialog-close" data-close="itemDialog">×</button><h2 id="itemDialogTitle">Add checklist item</h2><label><span>Item</span><input id="newItemText" required placeholder="What needs to be captured?"></label><label><span>Photographer prompt or note</span><textarea id="newItemPrompt" placeholder="Optional direction or reminder"></textarea></label><div class="dialog-actions"><button type="button" data-close="itemDialog" class="secondary-button">Cancel</button><button value="default" class="primary-button">Add item</button></div></form></dialog>
-  <dialog id="focusDialog" class="focus-dialog"><div class="focus-shell"><header><button id="focusClose" class="back-button">× Exit</button><span id="focusPosition"></span><button id="focusStar" class="focus-star">☆ Must get</button></header><div class="focus-media"><img id="focusImage" class="hidden" alt="Shot reference"><button id="focusAddImage" class="reference-empty">＋ Add reference image</button></div><span id="focusSection" class="eyebrow"></span><h2 id="focusTitle"></h2><div id="focusPrompt" class="focus-prompt"></div><textarea id="focusNote" placeholder="Fast note for this shot…"></textarea><div class="focus-next"><small>UP NEXT</small><strong id="focusNext">End of list</strong></div><div class="focus-actions"><button id="focusPrevious" class="secondary-button">← Previous</button><button id="focusComplete" class="primary-button">Complete & next →</button></div></div></dialog>
+  <dialog id="menuDialog"><form method="dialog"><button class="dialog-close" value="cancel" aria-label="Close"><span data-icon="close"></span></button><h2 id="menuTitle">App options</h2><div id="menuActions" class="menu-actions"></div></form></dialog>
+  <dialog id="itemDialog"><form method="dialog" id="itemForm"><button type="button" class="dialog-close" data-close="itemDialog" aria-label="Close"><span data-icon="close"></span></button><h2 id="itemDialogTitle">Add checklist item</h2><label><span>Item</span><input id="newItemText" required placeholder="What needs to be captured?"></label><label><span>Photographer prompt or note</span><textarea id="newItemPrompt" placeholder="Optional direction or reminder"></textarea></label><div class="dialog-actions"><button type="button" data-close="itemDialog" class="secondary-button">Cancel</button><button value="default" class="primary-button">Add item</button></div></form></dialog>
+  <dialog id="focusDialog" class="focus-dialog"><div class="focus-shell"><header><button id="focusClose" class="back-button"><span data-icon="close"></span><span>Exit</span></button><span id="focusPosition"></span><button id="focusStar" class="focus-star"><span data-icon="star"></span><span>Must get</span></button></header><div class="focus-media"><img id="focusImage" class="hidden" alt="Shot reference"><button id="focusAddImage" class="reference-empty"><span data-icon="image"></span><span>Add reference image</span></button></div><span id="focusSection" class="eyebrow"></span><h2 id="focusTitle"></h2><div id="focusPrompt" class="focus-prompt"></div><textarea id="focusNote" placeholder="Fast note for this shot…"></textarea><div class="focus-next"><small>UP NEXT</small><strong id="focusNext">End of list</strong></div><div class="focus-actions"><button id="focusPrevious" class="secondary-button"><span data-icon="back"></span><span>Previous</span></button><button id="focusComplete" class="primary-button"><span>Complete &amp; next</span><span data-icon="arrowRight"></span></button></div></div></dialog>
   <input id="importInput" type="file" accept="application/json" hidden><input id="referenceInput" type="file" accept="image/*" hidden>
 
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
-  <script src="templates.js?v=28"></script>
-  <script src="app.js?v=28"></script>
+  <script src="templates.js?v=29"></script>
+  <script src="app.js?v=29"></script>
 </body>
 </html>
