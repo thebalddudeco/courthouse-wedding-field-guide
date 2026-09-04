@@ -364,6 +364,9 @@ body { line-height: 1.55; letter-spacing: 0; }
 .home-heading p { line-height: 1.62; }
 .type-copy strong, .section-heading h2, .pixieset-cta h2, .shoot-name, .section-title strong, .quick-head h2, dialog h2 { line-height: 1.22; letter-spacing: 0; }
 .type-copy small, .shoot-copy span, .section-title small, .quick-head p, dialog label > span { line-height: 1.5; }
+.type-copy { display: grid; width: 100%; grid-template-rows: 1.22em 3em; gap: .28rem; }
+.type-copy strong { display: flex; min-height: 1.22em; align-items: flex-end; }
+.type-copy small { min-height: 3em; margin-top: 0; }
 .shoot-copy strong { line-height: 1.3; letter-spacing: 0; }
 .focus-shell h2 { line-height: 1.14; letter-spacing: 0; }
 
