@@ -374,7 +374,17 @@ body { line-height: 1.55; letter-spacing: 0; }
 .install-guide p { margin: 0 0 .8rem; }
 .install-guide ol { margin: 0 0 .9rem; padding-left: 1.35rem; }
 .install-guide li + li { margin-top: .42rem; }
-@media (max-width: 540px) { .save-status { display: none; } #installButton { padding: 0 .68rem; } }
+@media (max-width: 540px) {
+  .topbar-inner { gap: .55rem; }
+  .brand-button { gap: .45rem; }
+  .brand-mark { width: 2.2rem; height: 2.2rem; flex-basis: 2.2rem; }
+  .brand-button strong { font-size: 1.05rem; }
+  .brand-button small, .save-status { display: none; }
+  .header-actions { flex: none; gap: .4rem; }
+  #installButton { min-height: 2.35rem; padding: 0 .68rem; font-size: .84rem; }
+  .icon-button { width: 2.35rem; min-height: 2.35rem; }
+}
+@media (max-width: 350px) { #installButton { padding: 0 .52rem; } .brand-mark { width: 2rem; height: 2rem; flex-basis: 2rem; } }
 
 @media print {
   :root { color-scheme: light; }

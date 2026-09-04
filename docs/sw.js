@@ -1,5 +1,5 @@
-const CACHE='activeshot-v22';
-const ASSETS=['./','./index.html','./roam.css?v=22','./fonts/alfa-slab-one.woff2','./fonts/inter-latin.woff2','./templates.js?v=22','./app.js?v=22','./manifest.webmanifest','./icon-180.png','./icon-192.png','./icon-512.png','./illustrations/activeshot-illustrated-mark-1024.png','./illustrations/shot-list-1024.png','./active-shot-social-card.png'];
+const CACHE='activeshot-v23';
+const ASSETS=['./','./index.html','./roam.css?v=23','./fonts/alfa-slab-one.woff2','./fonts/inter-latin.woff2','./templates.js?v=23','./app.js?v=23','./manifest.webmanifest','./icon-180.png','./icon-192.png','./icon-512.png','./illustrations/activeshot-illustrated-mark-1024.png','./illustrations/shot-list-1024.png','./active-shot-social-card.png'];
 self.addEventListener('install',event=>{self.skipWaiting();event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(ASSETS)))});
 self.addEventListener('activate',event=>{event.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(key=>key!==CACHE).map(key=>caches.delete(key)))));self.clients.claim()});
 self.addEventListener('fetch',event=>{if(event.request.method!=='GET')return;event.respondWith(fetch(event.request).then(response=>{if(response.ok){const copy=response.clone();caches.open(CACHE).then(cache=>cache.put(event.request,copy))}return response}).catch(()=>caches.match(event.request).then(hit=>hit||((event.request.mode==='navigate')?caches.match('./index.html'):Response.error()))))});
