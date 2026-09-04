@@ -22,7 +22,7 @@
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="apple-touch-icon" href="icon-180.png">
   <link rel="icon" href="icon-192.png" type="image/png">
-  <link rel="stylesheet" href="roam.css?v=27">
+  <link rel="stylesheet" href="roam.css?v=28">
 </head>
 <body>
   <header class="topbar">
@@ -44,7 +44,7 @@
     <section class="assignment-card">
       <div class="assignment-top"><button id="backButton" class="back-button">← Shoots</button><span id="modePill" class="mode-pill"></span><button id="guideMenuButton" class="icon-button" aria-label="Guide options">•••</button></div>
       <div class="title-row"><div><span id="guideEyebrow" class="eyebrow"></span><input id="shootName" class="shoot-name" aria-label="Shoot name"></div><div class="progress-ring" id="progressRing"><strong id="progressPercent">0%</strong></div></div>
-      <div class="meta-grid"><label><span>Date / time</span><input id="shootDate" type="datetime-local"></label><label><span>Location</span><input id="shootLocation" placeholder="Location or meeting point"></label><label><span>People / subject</span><input id="shootPeople" placeholder="Client, model, couple or subject"></label></div>
+      <div class="meta-grid"><label><span>Date / time</span><span class="date-field-frame"><input id="shootDate" type="datetime-local"></span></label><label><span>Location</span><input id="shootLocation" placeholder="Location or meeting point"></label><label><span>People / subject</span><input id="shootPeople" placeholder="Client, model, couple or subject"></label></div>
       <textarea id="shootBrief" class="brief" placeholder="Creative brief, must-haves, sensitivities, access notes…"></textarea>
       <div class="progress-line"><span id="progressCount">0 / 0 complete</span><span id="mustCount" class="must-count">★ 0 must-get left</span><div class="progress"><i id="progressBar"></i></div></div>
     </section>
@@ -59,7 +59,7 @@
 
   <div id="bottomBar" class="bottom-bar hidden"><button id="bottomBack">←</button><div><strong id="bottomTitle"></strong><span id="bottomProgress"></span></div><button id="bottomQuick">Quick</button></div>
 
-  <dialog id="newShootDialog"><form method="dialog" id="newShootForm"><button type="button" class="dialog-close" data-close="newShootDialog" aria-label="Close">×</button><span id="dialogType" class="mode-pill"></span><h2>New assignment</h2><label><span>Name</span><input id="newShootName" required placeholder="Give this shoot a name"></label><label><span>Date</span><input id="newShootDate" type="datetime-local"></label><label><span>Location</span><input id="newShootLocation" placeholder="Optional"></label><div class="dialog-actions"><button type="button" data-close="newShootDialog" class="secondary-button">Cancel</button><button id="createShootButton" value="default" class="primary-button">Create guide</button></div></form></dialog>
+  <dialog id="newShootDialog"><form method="dialog" id="newShootForm"><button type="button" class="dialog-close" data-close="newShootDialog" aria-label="Close">×</button><span id="dialogType" class="mode-pill"></span><h2>New assignment</h2><label><span>Name</span><input id="newShootName" required placeholder="Give this shoot a name"></label><label><span>Date</span><span class="date-field-frame"><input id="newShootDate" type="datetime-local"></span></label><label><span>Location</span><input id="newShootLocation" placeholder="Optional"></label><div class="dialog-actions"><button type="button" data-close="newShootDialog" class="secondary-button">Cancel</button><button id="createShootButton" value="default" class="primary-button">Create guide</button></div></form></dialog>
 
   <dialog id="menuDialog"><form method="dialog"><button class="dialog-close" value="cancel">×</button><h2 id="menuTitle">App options</h2><div id="menuActions" class="menu-actions"></div></form></dialog>
   <dialog id="itemDialog"><form method="dialog" id="itemForm"><button type="button" class="dialog-close" data-close="itemDialog">×</button><h2 id="itemDialogTitle">Add checklist item</h2><label><span>Item</span><input id="newItemText" required placeholder="What needs to be captured?"></label><label><span>Photographer prompt or note</span><textarea id="newItemPrompt" placeholder="Optional direction or reminder"></textarea></label><div class="dialog-actions"><button type="button" data-close="itemDialog" class="secondary-button">Cancel</button><button value="default" class="primary-button">Add item</button></div></form></dialog>
@@ -67,7 +67,7 @@
   <input id="importInput" type="file" accept="application/json" hidden><input id="referenceInput" type="file" accept="image/*" hidden>
 
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
-  <script src="templates.js?v=27"></script>
-  <script src="app.js?v=27"></script>
+  <script src="templates.js?v=28"></script>
+  <script src="app.js?v=28"></script>
 </body>
 </html>

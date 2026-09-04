@@ -136,6 +136,33 @@ body:has(.guide-view:not(.hidden)) .icon-button { border-color: var(--rule); }
 input, textarea { width: 100%; min-width: 0; max-width: 100%; border: 0; border-bottom: 1px solid var(--charcoal); border-radius: 0; background: transparent; color: var(--paper); font-size: 1rem; outline: none; }
 input { height: 2.9rem; padding: 0 .65rem; }
 input[type="datetime-local"] { display: block; inline-size: 100%; min-inline-size: 0; max-inline-size: 100%; }
+.date-field-frame {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  height: 2.9rem;
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid var(--charcoal);
+  border-radius: .65rem;
+  background: var(--paper);
+  color: var(--charcoal);
+  font-size: 1rem;
+  letter-spacing: 0;
+  text-transform: none;
+}
+.date-field-frame:focus-within { box-shadow: 0 0 0 2px var(--gold); }
+.date-field-frame input {
+  width: 100% !important;
+  min-width: 0 !important;
+  max-width: 100% !important;
+  height: 100%;
+  margin: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
 textarea { min-height: 5rem; padding: .7rem .65rem; resize: vertical; }
 input:focus, textarea:focus { border-color: var(--gold); }
 ::placeholder { color: var(--gray); }
