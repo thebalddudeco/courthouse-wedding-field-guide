@@ -1,9 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="ActiveShot framed A mark">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="ActiveShot A app icon">
 <rect width="256" height="256" fill="#476E3D"/>
-<g fill="none" stroke-linecap="butt" stroke-linejoin="round">
-  <g stroke="#1A1A1A" stroke-width="18"><path d="M35 78V35h43"/><path d="M178 35h43v43"/><path d="M221 178v43h-43"/><path d="M78 221H35v-43"/></g>
-  <g stroke="#E8E6E0" stroke-width="8"><path d="M35 78V35h43"/><path d="M178 35h43v43"/><path d="M221 178v43h-43"/><path d="M78 221H35v-43"/></g>
-</g>
-<path d="M62 194 108 55h40l46 139h-35l-10-30h-42l-10 30Z" fill="#E47B28" stroke="#1A1A1A" stroke-width="8" stroke-linejoin="round"/>
-<path d="m128 99-15 43h30Z" fill="#476E3D" stroke="#1A1A1A" stroke-width="7" stroke-linejoin="round"/>
+<path d="M42 224 101 32h54l59 192h-47l-13-42h-54l-13 42Z" fill="#E47B28" stroke="#1A1A1A" stroke-width="9" stroke-linejoin="round"/>
+<path d="m128 91-19 58h38Z" fill="#476E3D" stroke="#1A1A1A" stroke-width="8" stroke-linejoin="round"/>
 </svg>

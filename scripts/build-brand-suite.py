@@ -10,6 +10,7 @@ ICONS = BRAND / "icons"
 SOCIAL = BRAND / "social"
 ILLUSTRATIONS = BRAND / "illustrations" / "png"
 ILLUSTRATED_MARK = ILLUSTRATIONS / "activeshot-illustrated-mark-1024.png"
+APP_ICON = ILLUSTRATIONS / "activeshot-app-icon-1024.png"
 
 INK = "#1A1A1A"
 ORANGE = "#E47B28"
@@ -43,6 +44,14 @@ def mark_svg(fg=INK, accent=ORANGE, bg=None, rounded=False):
 </g>
 <path d="M62 194 108 55h40l46 139h-35l-10-30h-42l-10 30Z" fill="{ORANGE}" stroke="{INK}" stroke-width="8" stroke-linejoin="round"/>
 <path d="m128 99-15 43h30Z" fill="{MOSS}" stroke="{INK}" stroke-width="7" stroke-linejoin="round"/>
+</svg>'''
+
+
+def app_icon_svg():
+    return f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="ActiveShot A app icon">
+<rect width="256" height="256" fill="{MOSS}"/>
+<path d="M42 224 101 32h54l59 192h-47l-13-42h-54l-13 42Z" fill="{ORANGE}" stroke="{INK}" stroke-width="9" stroke-linejoin="round"/>
+<path d="m128 91-19 58h38Z" fill="{MOSS}" stroke="{INK}" stroke-width="8" stroke-linejoin="round"/>
 </svg>'''
 
 
@@ -94,9 +103,10 @@ def draw_mark(draw, box, fg, accent):
     draw.ellipse((x+183*s-r,y+75*s-r,x+183*s+r,y+75*s+r),fill=accent)
 
 
-def save_icon(size, name, bg=ORANGE, fg=INK, accent=MOSS, radius=.22):
-    if ILLUSTRATED_MARK.exists():
-        Image.open(ILLUSTRATED_MARK).convert("RGB").resize((size, size), Image.Resampling.NEAREST).save(ICONS / "png" / name, optimize=True)
+def save_icon(size, name, bg=ORANGE, fg=INK, accent=MOSS, radius=.22, source=None):
+    source = source or APP_ICON
+    if source.exists():
+        Image.open(source).convert("RGB").resize((size, size), Image.Resampling.NEAREST).save(ICONS / "png" / name, optimize=True)
         return
     scale = 4
     canvas = Image.new("RGB", (size*scale, size*scale), bg)
@@ -226,7 +236,7 @@ save_text(LOGOS / "svg" / "activeshot-logo-stacked-dark.svg", lockup_svg("dark",
 for size in [16, 32, 48, 180, 192, 512, 1024]:
     save_icon(size, f"activeshot-icon-{size}.png")
 save_icon(512, "activeshot-maskable-512.png", radius=0)
-save_icon(1080, "activeshot-social-avatar-1080.png")
+save_icon(1080, "activeshot-social-avatar-1080.png", source=ILLUSTRATED_MARK)
 
 # Social channel templates
 social_image("instagram-post-square-1080",1080,1080,"WALK IN\nREADY.",layout="split")
@@ -265,7 +275,7 @@ copy2(ICONS / "png" / "activeshot-icon-180.png", ROOT / "docs" / "icon-180.png")
 copy2(ICONS / "png" / "activeshot-icon-192.png", ROOT / "docs" / "icon-192.png")
 copy2(ICONS / "png" / "activeshot-icon-512.png", ROOT / "docs" / "icon-512.png")
 copy2(SOCIAL / "png" / "website-social-card-1200x630.png", ROOT / "docs" / "active-shot-social-card.png")
-copy2(LOGOS / "svg" / "activeshot-mark-ink.svg", ROOT / "docs" / "icon.svg")
+save_text(ROOT / "docs" / "icon.svg", app_icon_svg())
 live_illustrations = ROOT / "docs" / "illustrations"
 live_illustrations.mkdir(parents=True, exist_ok=True)
 for illustration in ILLUSTRATIONS.glob("*.png"):
