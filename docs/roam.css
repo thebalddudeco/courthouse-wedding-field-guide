@@ -3,6 +3,7 @@
 
 :root {
   color-scheme: dark;
+  --safe-top: env(safe-area-inset-top, 0px);
   --charcoal: #1a1a1a;
   --gold: #e47b28;
   --olive: #476e3d;
@@ -385,6 +386,14 @@ body { line-height: 1.55; letter-spacing: 0; }
   .icon-button { width: 2.35rem; min-height: 2.35rem; }
 }
 @media (max-width: 350px) { #installButton { padding: 0 .52rem; } .brand-mark { width: 2rem; height: 2rem; flex-basis: 2rem; } }
+
+/* Installed iPhone/iPad apps can draw beneath the system status bar. */
+.topbar-inner {
+  min-height: calc(4.5rem + var(--safe-top));
+  padding-top: calc(.85rem + var(--safe-top));
+}
+.page { min-height: calc(100vh - 4.5rem - var(--safe-top)); }
+.stage-tabs { top: calc(4.5rem + var(--safe-top)); }
 
 @media print {
   :root { color-scheme: light; }
